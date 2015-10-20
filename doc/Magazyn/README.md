@@ -14,7 +14,8 @@ Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania ope
 ##4.Wymagania, instalacja (deploy), jak uruchomić i sprawdzić czy działa
 empty
 
-##5. Operacje:
+##5. Dokumentacja operacji obsługiwanych przez usługę 
+
 | Operacje           | Wejście                                          | Wyjście   | Wyjatki |
 | ------------------ | ------------------------------------------------ | -------   | :---: |
 | dodajDoMagazynu()  | int kod_produktu                                 | OneWay    |       |
