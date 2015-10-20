@@ -11,8 +11,10 @@ Adrian Makuch <br>
 ##3. Opis usugi
 Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania operacji dodania obiektu do magazynu, usunięcia obiektu z magazynu, uzupełnienia magazynu jak i wyświetlenia stanu magazynu. Moduł ma postać klasy zaimplementowanej usługi w procesie biznesowym. Moduł wykorzystywany jest bezpośrednio przez użytkownika końcowego jak również jako element innego procesu w systemie.
 
+##4.Wymagania, instalacja (deploy), jak uruchomić i sprawdzić czy działa
+empty
 
-##4. Operacje:
+##5. Operacje:
 | Operacje           | Wejście                                          | Wyjście   | Wyjatki |
 | ------------------ | ------------------------------------------------ | -------   | :---: |
 | dodajDoMagazynu()  | int kod_produktu                                 | OneWay    |       |
@@ -21,7 +23,7 @@ Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania ope
 | wyswietlStan()     |                                                  | int ilość| eventException niepoprawny_kod|
 
 
-##5. Diagram UML
+##6. Diagram UML
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/Capture.JPG)
 
 ```
