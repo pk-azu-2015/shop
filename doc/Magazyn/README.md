@@ -12,4 +12,17 @@ Adrian Makuch <br>
 Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania operacji dodania obiektu do magazynu, usunięcia obiektu z magazynu, uzupełnienia magazynu jak i wyświetlenia stanu magazynu. Moduł ma postać klasy zaimplementowanej usługi w procesie biznesowym. Moduł wykorzystywany jest bezpośrednio przez użytkownika końcowego jak również jako element innego procesu w systemie.
 
 
+###Operacje:
+| Operacje           | Wejście                                          | Wyjście   | Wyjatki |
+| ------------------ | ------------------------------------------------ | -------   | :---: |
+| dodajDoMagazynu()  | int kod_produktu                                 | OneWay    |       |
+| pobierz()          | int kod_produktu                                 | int ilość | eventException brak_towaru,niepoprawny_kod | 
+| uzupelnij()        |                                                  | OREPO_LOGS.txt    |       |
+| wyswietlStan()     |                                                  |  int ilość| eventException niepoprawny_kod     |
 
+
+
+
+
+
+uzupelnij(): @Oneway	Metoda zapisująca logi do pliku REPO_LOGS.tx
