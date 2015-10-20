@@ -1,5 +1,5 @@
 #Klienci
-Przechowuje informacje o wszystkich klientach sklepu, histori zakupów oraz oblicza wysokoć rabatu.
+Przechowuje informacje o wszystkich klientach sklepu, historii zakupów oraz oblicza wysokoć rabatu.
 ##Skład:
 1. Woźniak Jakub
 2. Żabicki Konrad
