@@ -1,4 +1,6 @@
 #Pracownicy
+zarządzanie pracownikami sklepu, wypłaty pensji
+
 
 ##Skład:
 1. Łukasz Winkler
