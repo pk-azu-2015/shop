@@ -23,8 +23,12 @@ Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fa
 | Pobierz stan konta | Operacja umożliwiająca sprawdzenie aktualnego stanu konta firmy |
 | Pobierz informacje o zakupie | Operacja umożliwia sprawdzenie informacji dotyczącej wybranego zakupu/sprzedaży. Na wejście podajemy id zakupu/sprzedaży. Na wyjściu otrzymujemy listę produktów z ceną za produkt. Może wystąpić błąd, jeśli dany id zakupu/sprzedaży nie istnieje |
 
+###Powiazanie z innymi uslugami
+* Sprzedaz - Dodaj sprzedaz - pobranie kodu sprzedaży
+* Magazyn - Dodaj zakup - pobranie kodu zakupu
+* Pracownicy - Wyplaty - pobranie listy płac
 
 ```
 changelog:
-20.10.2015: Dokumentacja, dodanie operacji i opisu operacji
+20.10.2015: Dokumentacja, dodanie operacji i opisu operacji, powiazanie z innymi uslugami
 ```
