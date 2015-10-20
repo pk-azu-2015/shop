@@ -16,10 +16,10 @@ Przechowuje informacje o wszystkich klientach sklepu, historii zakupów oraz obl
 ###Opis slowny operacji
 | Operacje  | Opis |
 |-----------|----|
-| Dodaj klienta | Bla bla bla... |
-| Usuń klienta | Tu też bla bla bla. |
-| Edytuj klienta | Bla bla! |
-| Dodaj do historii zakupów | Bla! |
+| Dodaj klienta | dodaj |
+| Usuń klienta | usuń |
+| Edytuj klienta | edytuj |
+| Dodaj do historii zakupów | dodaj do historii |
 | Oblicz rabat | Rabat. |
 
 ###Powiazanie z innymi uslugami
