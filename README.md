@@ -1,5 +1,8 @@
-# shop
-elo elo 
-hej hej
+# Sklep
 
-![alt tag](http://www.czeskimarket.pl/cmsdata//800x800/62-obrazek-podkladka-krecik.jpg)
+Projekt realizowany w ramach przedmiotu AZU na PK przez grupę laboratoryjną 1 w roku 2015/2016.
+
+Opis zawartości:
+
+    doc/ - dokumentacja projektu
+    src/ - kody źródłowe
