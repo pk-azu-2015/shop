@@ -29,5 +29,5 @@ Przykład:
 
 Przydatne link:
 
-[Markdown Live Preview](http://markdownlivepreview.com/)
-[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [Markdown Live Preview](http://markdownlivepreview.com/)
+* [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
