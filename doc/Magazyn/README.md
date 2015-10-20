@@ -29,5 +29,5 @@ empty
 
 ```
 changelog:
-20.10.2015: Utworzenie dokumentacji, dodanie operacji i opis słowny modułu Magazyn
+* 20.10.2015: Utworzenie dokumentacji, dodanie operacji i opis słowny modułu Magazyn
 ```
