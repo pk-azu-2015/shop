@@ -1,4 +1,17 @@
-Klienci
+#Klienci
+Przechowuje informacje o 
+##Skład:
+1. Woźniak Jakub
+2. Żabicki Konrad
+
+###Operacje:
+| Operacje           | Wejście                                          | Wyjście   | Wyjatki |
+| ------------------ | ------------------------------------------------ | -------   | :---: |
+| Dodaj klienta      | Imi, nazwisko, adres, NIP, nr tel., PESEL        | ID_klienta|       |
+| Usuń klienta       | ID_klienta                                       | OneWay    |       | 
+| Edytuj klienta     | Imi, nazwisko, adres, nr tel.                    | OneWay    |       |
+| Dodaj do historii zakupów | Kod sprzedaży                             | OneWay    |       |
+| Oblicz rabat       | ID_klienta                                       | Wysokoć rabatu |       |
 
 1. Nazwa usługi + krótki opis (brief)
 2. Osoby odpowiedzialne za usługę
