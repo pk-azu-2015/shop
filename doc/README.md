@@ -19,18 +19,18 @@ Sprawozdanie będzie się składać z kilku sekcji:
 
 Proszę użyć formatu nazwy pliku:
 
-    {nazwa_usługi}.md
+    {nazwa_usługi}/README.md
 
 
 
 Ewentualne załączane pliki umieszczać w:
 
-    {nazwa_usługi}/files
+    {nazwa_usługi}/
 
 Przykład:
 
-    warehouse.md
-    warehouse/files/diagram.png
+    warehouse/README.md
+    warehouse/diagram.png
 
 
 Przydatne link dla formatu .md:
