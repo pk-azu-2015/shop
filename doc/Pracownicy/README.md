@@ -23,3 +23,7 @@ Zarządzanie pracownikami sklepu, wypłaty pensji
 | Edytuj           | Usługa pozwalająca na edycję danych osobowych danego pracownika | 
 | Podaj listę płac | Usługa która pozwala na wyświetlenie listy wszystkich płac pracowników | 
 
+```
+changelog:
+v1: Dokumentacja, dodanie operacji i opisu operacji
+```
