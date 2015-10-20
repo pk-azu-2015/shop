@@ -1,5 +1,5 @@
 #Ksiegowosc
-
+przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fabryki) i wypłatach (pracownikom pensji)
 ##Skład:
 1. Łukasz Winkler
 2. Michał Szaleniec
