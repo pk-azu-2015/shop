@@ -21,4 +21,4 @@ Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania ope
 | wyswietlStan()     |                                                  | int ilość| eventException niepoprawny_kod|
 
 
-
+![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/Capture.JPG)
