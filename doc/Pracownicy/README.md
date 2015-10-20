@@ -25,5 +25,5 @@ Zarządzanie pracownikami sklepu, wypłaty pensji
 
 ```
 changelog:
-v1: Dokumentacja, dodanie operacji i opisu operacji
+20.10.2015: Dokumentacja, dodanie operacji i opisu operacji
 ```
