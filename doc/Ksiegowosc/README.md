@@ -1,12 +1,12 @@
 #Ksiegowosc
-przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fabryki) i wypłatach (pracownikom pensji)
+Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fabryki) i wypłatach (pracownikom pensji).
 ##Skład:
 1. Łukasz Winkler
 2. Michał Szaleniec
 3. Jakub Hudzik
 
-###Usługi:
-| Usługa             | Wejście                                          | Wyjście   | Error |
+###Operacje:
+| Operacje           | Wejście                                          | Wyjście   | Wyjatki |
 | ------------------ | ------------------------------------------------ | -------   | :---: |
 | Dodaj sprzedaż     | Lista(kod produktu, cena), kod sprzedaży         | OneWay    |       |
 | Dodaj zakup        | Lista(kod produktu, cena), kod zakupu            | OneWay    |       | 
