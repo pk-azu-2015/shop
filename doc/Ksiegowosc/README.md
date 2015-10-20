@@ -14,7 +14,7 @@ Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fa
 | Pobierz stan konta |                                                  | Lista plac|       |
 | Pobierz informacje o zakupie |Id sprzedazy                            | Lista(kod produktu,cena) | Nieprawodlowe ID      |
 
-####Opis slowny operacji
+###Opis slowny operacji
 | Operacje  | Opis |
 |-----------|----|
 | Dodaj sprzedaż | Operacja umożliwiająca zapisanie do bazy danych informacji na temat danej sprzedaży. Na wejściu jest lista z kodem produktu z magazynu, cena za produkt oraz kod sprzedaży z działu Sprzedaż |
@@ -22,3 +22,9 @@ Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fa
 | Wyplaty | Operacja umożliwiająca realizację zapłaty pracownikom za pracę. Na wejście lista płac |
 | Pobierz stan konta | Operacja umożliwiająca sprawdzenie aktualnego stanu konta firmy |
 | Pobierz informacje o zakupie | Operacja umożliwia sprawdzenie informacji dotyczącej wybranego zakupu/sprzedaży. Na wejście podajemy id zakupu/sprzedaży. Na wyjściu otrzymujemy listę produktów z ceną za produkt. Może wystąpić błąd, jeśli dany id zakupu/sprzedaży nie istnieje |
+
+
+```
+changelog:
+20.10.2015: Dokumentacja, dodanie operacji i opisu operacji
+```
