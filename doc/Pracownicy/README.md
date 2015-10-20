@@ -1,5 +1,5 @@
 #Pracownicy
-zarządzanie pracownikami sklepu, wypłaty pensji
+Zarządzanie pracownikami sklepu, wypłaty pensji
 
 
 ##Osoby odpowiedzialne za usługę:
