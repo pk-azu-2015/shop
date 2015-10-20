@@ -3,11 +3,17 @@ Proszę tu umieszczać swoje sprawozdania, które jednocześnie będą dokumenta
 
 Sprawozdanie będzie się składać z kilku sekcji:
 
-1. Nazwa usługi + krótki opis (brief).
-2. Osoby odpowiedzialne za usługę.
+1. Nazwa usługi + krótki opis (brief)
+2. Osoby odpowiedzialne za usługę
 3. Opis usługi
-4. Opis operacji obsługiwanych przez usługę.
-5. Change log (postęp nad rozwojem projektu i implementacji usługi, zmiany etc.)
+4. Wymagania, instalacja (deploy), jak uruchomić i sprawdzić czy działa
+5. Dokumentacja operacji obsługiwanych przez usługę
+ + Opis operacji
+ + Wejście
+ + Wyjście
+ + Wyjątki
+ + Przykład użycia, use case, diagramy sekwencji etc.
+6. Change log (postęp nad rozwojem projektu i implementacji usługi, zmiany etc.)
 
 **Proszę unikać liter z poza alfabetu ASCII w nazwa plików tj. liter z ogonkami, cyrylicy, liter skandynawskich itp.**
 
@@ -27,7 +33,7 @@ Przykład:
     warehouse/files/diagram.png
 
 
-Przydatne link:
+Przydatne link dla formatu .md:
 
 * [Markdown Live Preview](http://markdownlivepreview.com/)
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
