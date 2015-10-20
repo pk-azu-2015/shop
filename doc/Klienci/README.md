@@ -13,15 +13,18 @@ Przechowuje informacje o wszystkich klientach sklepu, historii zakupów oraz obl
 | Dodaj do historii zakupów | Kod sprzedaży                             | OneWay    |       |
 | Oblicz rabat       | ID_klienta                                       | Wysokoć rabatu | Nieprawidowe ID      |
 
-1. Nazwa usługi + krótki opis (brief)
-2. Osoby odpowiedzialne za usługę
-3. Opis usługi
-4. Wymagania, instalacja (deploy), jak uruchomić i sprawdzić czy działa
-5. Dokumentacja operacji obsługiwanych przez usługę
- + Opis operacji
- + Wejście
- + Wyjście
- + Wyjątki
- + Przykład użycia, use case, diagramy sekwencji etc.
-6. Change log (postęp nad rozwojem projektu i implementacji usługi, zmiany etc.)
+###Opis slowny operacji
+| Operacje  | Opis |
+|-----------|----|
+| Dodaj klienta | Bla bla bla... |
+| Usuń klienta | Tu też bla bla bla. |
+| Edytuj klienta | Bla bla! |
+| Dodaj do historii zakupów | Bla! |
+| Oblicz rabat | Rabat. |
+
+###Powiazanie z innymi uslugami
+* Jeszcze - opis
+* nie - opis1
+* wiem - opis2
+
 
