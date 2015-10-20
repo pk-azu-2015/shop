@@ -23,3 +23,8 @@ Zadaniem modułu Magazyn jest umożliwienie użytkownikowi systemu dokonania ope
 
 ##5. Diagram UML
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/Capture.JPG)
+
+```
+changelog:
+20.10.2015: Utworzenie dokumentacji, dodanie operacji i opis słowny modułu Magazyn
+```
