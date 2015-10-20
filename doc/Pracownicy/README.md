@@ -1,6 +1,6 @@
 #Pracownicy
 
 ##Skład:
-*Łukasz Winkler
-*Michał Szaleniec
-*Jakub Hudzik
+1. Łukasz Winkler
+2. Michał Szaleniec
+3. Jakub Hudzik
