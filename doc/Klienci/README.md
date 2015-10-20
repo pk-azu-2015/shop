@@ -7,11 +7,11 @@ Przechowuje informacje o
 ###Operacje:
 | Operacje           | Wejście                                          | Wyjście   | Wyjatki |
 | ------------------ | ------------------------------------------------ | -------   | :---: |
-| Dodaj klienta      | Imi, nazwisko, adres, NIP, nr tel., PESEL        | ID_klienta|       |
-| Usuń klienta       | ID_klienta                                       | OneWay    |       | 
+| Dodaj klienta      | Imi, nazwisko, adres, NIP, nr tel., PESEL        | ID_klienta| NIP, PESEL      |
+| Usuń klienta       | ID_klienta                                       | OneWay    | Nieprawidowe ID      | 
 | Edytuj klienta     | Imi, nazwisko, adres, nr tel.                    | OneWay    |       |
 | Dodaj do historii zakupów | Kod sprzedaży                             | OneWay    |       |
-| Oblicz rabat       | ID_klienta                                       | Wysokoć rabatu |       |
+| Oblicz rabat       | ID_klienta                                       | Wysokoć rabatu | Nieprawidowe ID      |
 
 1. Nazwa usługi + krótki opis (brief)
 2. Osoby odpowiedzialne za usługę
