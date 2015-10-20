@@ -27,5 +27,5 @@ Zarządzanie pracownikami sklepu, wypłaty pensji
 * Podaj listę płac - operacja wykorzystywana przez usługę Księgowość -> Wypłaty
 ```
 changelog:
-20.10.2015: Dokumentacja, dodanie operacji i opisu operacji
+2015-10-20: Dokumentacja, dodanie operacji i opisu operacji
 ```
