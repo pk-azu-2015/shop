@@ -2,12 +2,12 @@
 zarządzanie pracownikami sklepu, wypłaty pensji
 
 
-##Skład:
+##Osoby odpowiedzialne za usługę:
 1. Łukasz Winkler
 2. Michał Szaleniec
 3. Jakub Hudzik
 
-###Usługi:
+###Operacje:
 | Usługa           | Wejście                                          | Wyjście   | Error |
 | ---------------- | ------------------------------------------------ | -------   | :---: |
 | Dodaj            | Imię, Nazwisko, Adres, PESEL, Stanowisko, Pensja | PESEL     |       |
@@ -15,7 +15,7 @@ zarządzanie pracownikami sklepu, wypłaty pensji
 | Edytuj           | Imię, Nazwisko, Adres, Stanowisko, Pensja        | OneWay    |       |
 | Podaj listę płac | All(PESEL)                                       | ListaPłac |       |
 
-###Opis słowny usług:
+###Opis słowny operacji:
 | Usługa           | Opis                           | 
 | ---------------- | ------------------------------ | 
 | Dodaj            |Usługa dodająca nowego pracownika do bazy. Dane wejściowe to dane osobowe osoby: imię, nazwisko, adres, pesel, stanowisko pracy oraz pensja. Pesel to unikalny numer id | 
