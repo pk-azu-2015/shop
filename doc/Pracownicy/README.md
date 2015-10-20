@@ -8,8 +8,8 @@ Zarządzanie pracownikami sklepu, wypłaty pensji
 3. Jakub Hudzik
 
 ###Operacje:
-| Usługa           | Wejście                                          | Wyjście   | Error |
-| ---------------- | ------------------------------------------------ | -------   | :---: |
+| Usługa           | Wejście                                          | Wyjście   | Wyjątki |
+| ---------------- | ------------------------------------------------ | -------   | :-----: |
 | Dodaj            | Imię, Nazwisko, Adres, PESEL, Stanowisko, Pensja | PESEL     |       |
 | Usuń             | PESEL                                            | OneWay    |       |
 | Edytuj           | Imię, Nazwisko, Adres, Stanowisko, Pensja        | OneWay    |       |
@@ -19,7 +19,7 @@ Zarządzanie pracownikami sklepu, wypłaty pensji
 | Usługa           | Opis                           | 
 | ---------------- | ------------------------------ | 
 | Dodaj            |Usługa dodająca nowego pracownika do bazy. Dane wejściowe to dane osobowe osoby: imię, nazwisko, adres, pesel, stanowisko pracy oraz pensja. Pesel to unikalny numer id | 
-| Usuń             | Usługa pozwalająca na zwolnienie pracownika. Dane wejściowe to id (czyli numer pesel)| 
+| Usuń             | Usługa pozwalająca na zwolnienie pracownika. Dane wejściowe to id (czyli numer PESEL)| 
 | Edytuj           | Usługa pozwalająca na edycję danych osobowych danego pracownika | 
 | Podaj listę płac | Usługa która pozwala na wyświetlenie listy wszystkich płac pracowników | 
 
