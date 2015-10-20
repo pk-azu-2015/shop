@@ -48,4 +48,3 @@ Przydatne link dla formatu .md:
 
 * [Markdown Live Preview](http://markdownlivepreview.com/)
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-s
