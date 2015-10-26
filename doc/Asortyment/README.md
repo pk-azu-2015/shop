@@ -24,3 +24,17 @@ Sprawozdanie zawiera opis usługi​asortyment​dla sklepu (firma 1). Asortymen
 ```Changelog: 2015-10-20
 Opis usługi SOA```
 
+
+##Diagram przypadków użycia z innymi usługami
+![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Asortyment/use-case.png)
+
+**dodajProdukt** - usługa, którą wywołuje pracownik, dodaje produkt do asortmentu sklepu; wyzwala usłegę dodającą (zamawiającą) produkt do magazynu
+
+**usunProdukt** - usługa, którą wywołuje pracownik, usuwa produkt z asortymentu sklepu, pod warunkiem, że zadany produkt nie istnieje już w magazynie (zapytanie do usługi magazyn: czyJestWMagazynie)
+
+**wyswietlListeProduktow** - usługa, którą wywołuje klient lub pracownik wyświetla listę prodktów stanowiących asortyment sklepu; 
+
+**dodajDoMagazynu** - funkcja wywoływana z usługi Magazyn - dodaje produkt do magazynu po warunkiem, że istnieje on w asortymencie sklepu
+
+**sprawdzAsortyment** - funkcja z usługi Klient - wyswielta dostępny asortyment sklepu
+
