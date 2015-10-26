@@ -10,7 +10,7 @@ Nasza usługa jest usługą końcową przeznaczoną dla końcowego klienta.
 2. Jacek Wiślak
 
 
-###3. Opis usługi.
+##3. Opis usługi.
 | Usługa           | Wejście                                          | Wyjście   | Wyjątek |
 | ---------------- | ------------------------------------------------ | -------   | :---: |
 |1. Sprzedaj            | lista(kod_produktu, ilość), id_klienta |  cena, lista(kod_sprzedaży, kod_produktu)  |  brak towaru    |
@@ -32,7 +32,8 @@ zwrot_pieniędzy. Wyjątek to całkowite nieuznanie gwarancji.
 Zwrot na wejściu podajemy kod_sprzedaży i kod_produktu, w przypadku uznania zwrotu
 otrzymujemy zwrot pieniędzy wyjątek wtedy gdy nie zostanie uznany.
 
-Nasza usługa korzysta z dwóch innych usług klienci oraz magazyn
+###3.1 Wspópraca
+Nasza usługa wspópracuje z dwoma innymi usugami: Klienci oraz Magazyn.
 
 
 ##4. Wymagania, instalacja (deploy), uruchomienie.
