@@ -56,8 +56,17 @@ To Do.
 ![alt text](http://i.imgur.com/dwnz1MR.png "Diagram klas usługi Sprzedaż")
 
 
+![alt text](http://i.imgur.com/lQBw2Tl.png "Diagram UML wszystkich usug")
+
+
 ![alt text](http://i.imgur.com/QB5urr1.png "Przypadki użycia dla usługi Sprzedaż")
 
+
+| Identyfikator           | Nazwa                                          | Uwagi   | Opis |
+| ---------------- | ------------------------------------------------ | -------   | :---: |
+| UC_1           | Sprzedaj                                          |    | sprzedaż produktu o podanym kodzie_produktu |
+| UC_2           | Naprawa gwarancyjna                                           |    |  naprawa gwarancyjna na wejściu przyjmuje kod_sprzedaży oraz dostaniemy dwie wartości Boolean prawdopodobnie w formie listy z naprawą oraz zwrot_pieniędzy. Wyjątek to całkowite nieuznanie gwarancji |
+| UC_3           | Zwroty                                          |    | podajemy kod_sprzedaży i kod_produktu, w przypadku uznania zwrotu otrzymujemy zwrot pieniędzy wyjątek wtedy gdy nie zostanie uznany |
 
 ##6. Change log.
 
