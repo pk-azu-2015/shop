@@ -38,3 +38,8 @@ Opis usługi SOA```
 
 **sprawdzAsortyment** - funkcja z usługi Klient - wyswielta dostępny asortyment sklepu
 
+##Diagram sekwencji
+![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Asortyment/sequenceDiagram.png)
+
+```Changelog: 2015-10-26
+Diagram przypadków użycia + diagram sekwencji```
