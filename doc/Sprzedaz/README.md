@@ -17,7 +17,10 @@ Nasza usługa jest usługą końcową przeznaczoną dla końcowego klienta.
 |2.  Naprawa gwarancyjna     |      kod_sprzedaży, kod_produktu    | naprawa, zwrot_pięniedzy   |   nieuznanie gwarancji |
 |3.  Zwroty      | kod_sprzedaży, kod_produktu         | zwrot pieniędzy   |    nie uwzględnienie zwrotu  |
 
+###3.1 Wspópraca
+Nasza usługa wspópracuje z dwoma innymi usugami: Klienci oraz Magazyn.
 
+###3.2 Opis powizań z innymi usugami
 Na początku trzeba wprowadzić id_klienta oraz kod_produktu i jego ilość, na wyjściu dostajemy
 cenę oraz kod_sprzedaży, który identyfikuje transakcję wraz z kod_produktu który wskazuje na
 nabywany artykuł. W przypadku braku artykułu wystąpi wyjątek w postaci „braku towaru” na
@@ -32,12 +35,9 @@ zwrot_pieniędzy. Wyjątek to całkowite nieuznanie gwarancji.
 Zwrot na wejściu podajemy kod_sprzedaży i kod_produktu, w przypadku uznania zwrotu
 otrzymujemy zwrot pieniędzy wyjątek wtedy gdy nie zostanie uznany.
 
-###3.1 Wspópraca
-Nasza usługa wspópracuje z dwoma innymi usugami: Klienci oraz Magazyn.
-
 
 ##4. Wymagania, instalacja (deploy), uruchomienie.
-Empty.
+To Do.
 
 
 ##5. Dokumentacja operacji obsługiwanych przez usługę:
