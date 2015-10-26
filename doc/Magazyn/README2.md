@@ -27,12 +27,6 @@ empty
 ##6. Diagram UML
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/Capture.JPG)
 
-```
-changelog:
-* 20.10.2015: Utworzenie dokumentacji, dodanie operacji i opis słowny modułu Magazyn
-```
-
-
 
 ##1 Wspólpraca.
 Modul magazyn wspólpracuje z Asortyment, Sprzedaż, Ksiegowosc
@@ -73,7 +67,7 @@ usunięty z listy produktów dostępnych.
 ##4.  Diagram sekwencji UML.
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/SequenceDiagram.jpg)
 
-
 changelog:
+* 20.10.2015: Utworzenie dokumentacji, dodanie operacji i opis słowny modułu Magazyn
 * 26.10.2015: Utworzenie dalszej czesci dokumentacji, dodanie diagramu sekwencji, diagramu przypadkow uzycia i ich opisu
 ```
