@@ -28,7 +28,7 @@ empty
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/Capture.JPG)
 
 
-##1 Wspólpraca.
+##1. Wspólpraca.
 Modul magazyn wspólpracuje z Asortyment, Sprzedaż, Ksiegowosc
 
 ##2. Diagram przypadkow użycia.
@@ -64,7 +64,7 @@ usunięty z listy produktów dostępnych.
 **dodajZakup()** – zapisuje w bazie danych dane na temat zakupów 
 
 
-##4.  Diagram sekwencji UML.
+##4. Diagram sekwencji UML.
 ![alt text](https://github.com/pk-azu-2015/shop/blob/master/doc/Magazyn/SequenceDiagram.jpg)
 
 changelog:
