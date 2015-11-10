@@ -27,4 +27,7 @@ Przechowuje informacje o wszystkich klientach sklepu, historii zakupów oraz obl
 * nie - opis1
 * wiem - opis2
 
-
+```
+changelog:
+2015-10-20: Dokumentacja, dodanie operacji i opisu operacji
+```
