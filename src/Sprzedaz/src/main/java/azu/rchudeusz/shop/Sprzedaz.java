@@ -5,6 +5,7 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -22,14 +23,14 @@ List<Pair<String, Integer>> list;
 
     @WebMethod(operationName = "naprawa_gwarancyjna")
     public String naprawa_gwarancyjna(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu")String kod_produktu) {
-        //return "Hello " + txt + " !";
+
        return "ss";
     }
   
     @WebMethod(operationName = "zwroty")
     public Boolean zwroty(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu")String kod_produktu) {
-        //return "Hello " + txt + " !";
-        return true;
+        Random a = new Random();
+        return a.nextBoolean();
     }
 
 }
