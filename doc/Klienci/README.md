@@ -23,9 +23,7 @@ Przechowuje informacje o wszystkich klientach sklepu, historii zakupów oraz obl
 | Oblicz rabat | Rabat. |
 
 ###Powiazanie z innymi uslugami
-* Jeszcze - opis
-* nie - opis1
-* wiem - opis2
+* Sprzedaż - dodajKlienta - generowanie ID_klienta
 
 ```
 changelog:
