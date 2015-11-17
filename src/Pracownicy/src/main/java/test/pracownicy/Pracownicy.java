@@ -5,6 +5,8 @@
  */
 package test.pracownicy;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.jws.Oneway;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -20,8 +22,8 @@ public class Pracownicy {
     
     @WebMethod(operationName = "Dodaj")
     public String Dodaj(String imie, String nazwisko, 
-                String adres, String pesel, String stanowisko, String pensja) {
-        return "Twoj Pesel: " + pesel;
+                String adres, String pesel, String stanowisko, double pensja) {
+        return pesel;
     }
     @Oneway
     @WebMethod(operationName = "Usun")
@@ -33,10 +35,9 @@ public class Pracownicy {
                 String adres, String stanowisko, String pensja) {
         }
     
-	@WebMethod(operationName = "ListaPlac")
-    public void /*List<ListaPlac>*/ pobierzListePlac() {
-        //List<ListaPlac> lista = new ArrayList<>();
-      //  return lista;
-    
-	
+    @WebMethod(operationName = "ListaPlac")
+    public List<ListaPlac> pobierzListePlac() {
+        List<ListaPlac> lista = new ArrayList<>();
+        return lista;
+    }
 }

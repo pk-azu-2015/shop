@@ -21,7 +21,7 @@ empty
 | dodajDoMagazynu()  | int kod_produktu                                 | OneWay    |       |
 | pobierz()          | int kod_produktu                                 | int ilość | eventException brak_towaru,niepoprawny_kod | 
 | uzupelnij()        |                                                  | REPO_LOGS.txt    |       |
-| wyswietlStan()     |                                                  | int ilość| eventException niepoprawny_kod|
+| wyswietlStan()     | int kod_produktu                                 | int ilość| eventException niepoprawny_kod|
 
 
 ##6. Diagram UML

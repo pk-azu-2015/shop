@@ -11,6 +11,7 @@ import javax.jws.Oneway;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import org.w3c.dom.events.EventException;
 
 /**
  *
@@ -28,20 +29,20 @@ Logger log;
     }
     @Oneway
    @WebMethod(operationName = "dodajDoMagazynu")
-    public void dodajDoMagazynu(@WebParam(name = "kod_prod") int txt) {
+    public void dodajDoMagazynu(@WebParam(name = "kod_prod") int kod) {
         
     }
      @WebMethod(operationName = "pobierz")
-    public int pobierz(@WebParam(name = "name") int txt) {
-        return txt;
+    public int pobierz(@WebParam(name = "name") int kod) {
+        return kod;
     }
      @WebMethod(operationName = "uzupelnij")
     public void uzupelnij() {     
        log.info(new Date().toString());
     }
      @WebMethod(operationName = "wyswietlStan")
-    public int wyswietlStan() {
-        int txt=0;
-        return txt;
+    public int wyswietlStan(@WebParam(name="kod")int kod) throws EventException{
+        int ilosc=0;
+        return ilosc;
     }
 }
