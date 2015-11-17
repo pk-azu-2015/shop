@@ -37,5 +37,6 @@ public class Pracownicy {
     public void /*List<ListaPlac>*/ pobierzListePlac() {
         //List<ListaPlac> lista = new ArrayList<>();
       //  return lista;
-    }
+    
+	
 }
