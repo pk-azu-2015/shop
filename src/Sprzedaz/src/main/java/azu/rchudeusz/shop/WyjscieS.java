@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  *
- * @author rchudeusz
+ * @author rchudeusz,jwislak
  */
 public class WyjscieS {
 
