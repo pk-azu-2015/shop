@@ -20,8 +20,8 @@ public class Pracownicy {
     
     @WebMethod(operationName = "Dodaj")
     public String Dodaj(String imie, String nazwisko, 
-                String adres, String pesel, String stanowisko, String pensja) {
-        return "Twoj Pesel: " + pesel;
+                String adres, String pesel, String stanowisko, double pensja) {
+        return pesel;
     }
     @Oneway
     @WebMethod(operationName = "Usun")
