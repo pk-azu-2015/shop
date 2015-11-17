@@ -40,7 +40,7 @@ public class Sprzedaz {
 
         
         //do implementacji
-        WyjscieN sn1 = new WyjscieN(true, false);
+        WyjscieN sn1 = new WyjscieN(new Random().nextBoolean(), new Random().nextBoolean());
 
         return sn1;
     }
