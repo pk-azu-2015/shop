@@ -15,20 +15,28 @@ import java.util.Random;
 @WebService(serviceName = "Sprzedaz")
 public class Sprzedaz {
 
-List<Pair<String, Integer>> list;
+    List<Pair<String, Integer>> list;
+
     @WebMethod(operationName = "sprzedaj")
-    public String sprzedaj(@WebParam(name = "id_klienta") String id_klienta, @WebParam(name = "list") List<Pair<String, Integer>> list) {
-        return "Hello " + id_klienta + " !";
+    public WyjscieS sprzedaj(@WebParam(name = "id_klienta") String id_klienta, @WebParam(name = "list") List<Pair<String, Integer>> list) {
+
+        //do implementacji
+        WyjscieS sp1 = new WyjscieS();
+
+        return sp1;
     }
 
     @WebMethod(operationName = "naprawa_gwarancyjna")
-    public String naprawa_gwarancyjna(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu")String kod_produktu) {
+    public WyjscieN naprawa_gwarancyjna(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu") String kod_produktu) {
 
-       return "ss";
+        //do implementacji
+        WyjscieN sn1 = new WyjscieN(true, false);
+
+        return sn1;
     }
-  
+
     @WebMethod(operationName = "zwroty")
-    public Boolean zwroty(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu")String kod_produktu) {
+    public Boolean zwroty(@WebParam(name = "kod_sprzedazy") String kod_sprzedazy, @WebParam(name = "kod_produktu") String kod_produktu) {
         Random a = new Random();
         return a.nextBoolean();
     }
