@@ -2,7 +2,7 @@ package azu.rchudeusz.shop;
 
 /**
  *
- * @author rchudeusz
+ * @author rchudeusz,jwislak
  */
 public class WyjscieN {
 
