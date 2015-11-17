@@ -1,4 +1,9 @@
-package azu.maven.ksiegowosc;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package test.ksiegowosc;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +23,11 @@ public class Ksiegowosc {
     /**
      * Funkcja dodajaca nowa sprzedaz do ksiegowosci
      *
+     * @param produkt
      * @param kodSprzedazy
      */
     @WebMethod(operationName = "dodaj_sprzedaz")
-    public void dodajSprzedaz(/*@WebParam(name = "produkt") List<Produkt> produkt,*/@WebParam(name = "kodSprzedazy") int kodSprzedazy) {
+    public void dodajSprzedaz(@WebParam(name = "produkt") List<Produkt> produkt,@WebParam(name = "kodSprzedazy") int kodSprzedazy) {
         //zamiast List<Produkt> produkt, moze List<Pair<Integer, Double>> produkt ??
         System.out.println("Ok - dodaj_sprzedaz");
     }
@@ -29,10 +35,11 @@ public class Ksiegowosc {
     /**
      * Funkcja dodajaca nowy zakup do ksiegowosci
      *
+     * @param produkt
      * @param kodZakupu
      */
     @WebMethod(operationName = "dodaj_zakup")
-    public void dodajZakup(/*@WebParam(name = "produkt") List<Produkt> produkt,*/@WebParam(name = "kodZakupu") int kodZakupu) {
+    public void dodajZakup(@WebParam(name = "produkt") List<Produkt> produkt,@WebParam(name = "kodZakupu") int kodZakupu) {
         //zamiast List<Produkt> produkt, moze List<Pair<Integer, Double>> produkt ??
         System.out.println("Ok - dodaj_zakup");
     }
@@ -52,11 +59,9 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_stan_konta")
-    public List<Integer> /*List<ListaPlac> */ pobierzStanKonta() {
-        //List<ListaPlac> tmp = new ArrayList<>();
-        //klient ktory bedzie pobieral z 
-        List<Integer> tmp = new ArrayList<>();
-        return tmp;
+    public double pobierzStanKonta() {
+        double stanKonta = 0.0;
+        return stanKonta;
     }
 
     /**
@@ -67,9 +72,8 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_info_o_zakupie")
-    public List<Integer>/*List<Produkt>*/ pobierzInfoZakup(@WebParam(name = "idSprzedazy") int idSprzedazy) {
-        //List<Produkt> tmp = new ArrayList<>();
-        List<Integer> tmp = new ArrayList<>();
+    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idSprzedazy") int idSprzedazy) {
+        List<Produkt> tmp = new ArrayList<>();
         if (/*!tmp.find(idSprzedazy)*/false) {
             return null;
         } else {
