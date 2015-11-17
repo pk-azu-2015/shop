@@ -33,4 +33,10 @@ public class Pracownicy {
                 String adres, String stanowisko, String pensja) {
         }
     
+	@WebMethod(operationName = "ListaPlac")
+    public void /*List<ListaPlac>*/ pobierzListePlac() {
+        //List<ListaPlac> lista = new ArrayList<>();
+      //  return lista;
+    
+	
 }
