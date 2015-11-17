@@ -6,36 +6,36 @@ package azu.rchudeusz.shop;
  */
 public class Item2 {
 
-    String kod_produktu;
-    String ilosc;
+    long kod_produktu;
+    int ilosc;
 
-    /**
-     *
-     * @param kod_sprzedazy
-     * @param kod_produktu
-     */
+
     public Item2() {
 
     }
-
-    public Item2(String kod_produktu, String ilosc) {
+    /**
+     * 
+     * @param kod_produktu
+     * @param ilosc 
+     */
+    public Item2(long kod_produktu, int ilosc) {
         this.kod_produktu = kod_produktu;
         this.ilosc = ilosc;
     }
 
-    public String getKod_produktu() {
+    public long getKod_produktu() {
         return kod_produktu;
     }
 
-    public void setKod_produktu(String kod_produktu) {
+    public void setKod_produktu(long kod_produktu) {
         this.kod_produktu = kod_produktu;
     }
 
-    public String getIlosc() {
+    public int getIlosc() {
         return ilosc;
     }
 
-    public void setIlosc(String ilosc) {
+    public void setIlosc(int ilosc) {
         this.ilosc = ilosc;
     }
 

@@ -1,5 +1,6 @@
 package azu.rchudeusz.shop;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import static java.util.Collections.list;
 import javax.jws.WebService;
@@ -16,15 +17,6 @@ import java.util.Random;
 public class Sprzedaz {
 
     //List<Pair<String, Integer>> list;
-    private String getRandomHexString(int numchars){
-        Random r = new Random();
-        StringBuilder sb = new StringBuilder();
-        while(sb.length() < numchars){
-            sb.append(Integer.toHexString(r.nextInt()));
-        }
-
-        return sb.toString().substring(0, numchars);
-    }
     
     @WebMethod(operationName = "sprzedaj")
     public WyjscieS sprzedaj(@WebParam(name = "id_klienta") String id_klienta, @WebParam(name = "list") List<Item2> list) {
@@ -34,10 +26,10 @@ public class Sprzedaz {
         //WyjscieS sp1 = new WyjscieS(4.5, new List<Item>());
         List<Item> listTmp= new ArrayList<Item>();
         for (int i=0; i<list.size(); i++) {
-            listTmp.add(new Item(this.getRandomHexString(15),list.get(i).getKod_produktu()));
+            listTmp.add(new Item(new Random().nextLong(),list.get(i).getKod_produktu()));
         }
         //zamiast pobierania ceny i ilosci towaru losujemy wartosc zakupow
-        double cena = new Random().nextDouble();
+        BigDecimal cena = BigDecimal.valueOf(new Random().nextDouble());
         WyjscieS sp1 = new WyjscieS(cena, listTmp);
 
         return sp1;

@@ -1,5 +1,6 @@
 package azu.rchudeusz.shop;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -8,22 +9,22 @@ import java.util.List;
  */
 public class WyjscieS {
 
-    double cena;
+    BigDecimal cena;
     List<Item> lista;
 
     public WyjscieS() {
     }
 
-    public WyjscieS(double cena, List<Item> lista) {
+    public WyjscieS(BigDecimal cena, List<Item> lista) {
         this.cena = cena;
         this.lista = lista;
     }
 
-    public double getCena() {
+    public BigDecimal getCena() {
         return cena;
     }
 
-    public void setCena(double cena) {
+    public void setCena(BigDecimal cena) {
         this.cena = cena;
     }
 
