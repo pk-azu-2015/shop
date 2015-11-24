@@ -34,9 +34,9 @@ public class Pracownicy {
 		
 		// LACZENIE Z BAZA
 		System.out.print("\nLaczenie z baza danych:");
-		String baza = "";
-		String user = "";
-		String pass = "";
+		String baza = "jdbc:mysql://db4free.net/azu2015";
+		String user = "azu2015";
+		String pass = "azu2015";
 		java.sql.Connection conn = null;
         try {
 			conn=DriverManager.getConnection(baza, user, pass);
