@@ -22,7 +22,7 @@ Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fa
 | Dodaj zakup | Operacja umożliwiająca zapisanie do bazy danych informacji na temat danego zakupu. Na wejściu jest lista z kodem produktu, ceną oraz kodem zakupu z działu Magazyn |
 | Wyplaty | Operacja umożliwiająca realizację zapłaty pracownikom za pracę. Na wejście lista płac |
 | Pobierz stan konta | Operacja umożliwiająca sprawdzenie aktualnego stanu konta firmy |
-| Pobierz informacje o zakupie | Operacja umożliwia sprawdzenie informacji dotyczącej wybranego zakupu/sprzedaży. Na wejście podajemy id zakupu. Na wyjściu otrzymujemy listę produktów z ceną za produkt. Może wystąpić błąd, jeśli dany id zakupu/sprzedaży nie istnieje |
+| Pobierz informacje o zakupie | Operacja umożliwia sprawdzenie informacji dotyczącej wybranego zakupu/sprzedaży. Na wejście podajemy id zakupu. Na wyjściu otrzymujemy listę produktów z ceną za produkt. Może wystąpić błąd, jeśli dany id zakupu nie istnieje |
 | Pobierz informacje o sprzedaży | Operacja umożliwia sprawdzenie informacji dotyczącej wybranego sprzedaży. Na wejście podajemy id sprzedaży. Na wyjściu otrzymujemy listę produktów z ceną za produkt. Może wystąpić błąd, jeśli dany id sprzedaży nie istnieje |
 
 ###Powiazanie z innymi uslugami
