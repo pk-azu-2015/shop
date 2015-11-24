@@ -2,8 +2,9 @@ package azu.rchudeusz.shop;
 
 /**
  *
- * @author rchudeusz,jwislak
+ * @author rchudeusz, jwislak
  */
+
 public class Item {
 
     long kod_sprzedazy;

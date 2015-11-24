@@ -2,14 +2,9 @@ package azu.rchudeusz.shop;
 
 /**
  *
- * @author rchudeusz,jwislak
+ * @author rchudeusz, jwislak
  */
-/**
- *
- * @author student
- * @param <T1>
- * @param <T2>
- */
+
 public class Pair<T1, T2> {
 
     private T1 a;

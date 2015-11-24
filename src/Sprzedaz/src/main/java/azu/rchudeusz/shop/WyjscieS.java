@@ -5,8 +5,9 @@ import java.util.List;
 
 /**
  *
- * @author rchudeusz,jwislak
+ * @author rchudeusz, jwislak
  */
+
 public class WyjscieS {
 
     BigDecimal cena;
