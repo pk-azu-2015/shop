@@ -33,20 +33,13 @@ public class Ksiegowosc {
 		
 		// LACZENIE Z BAZA
 		System.out.print("\nLaczenie z baza danych:");
-		String baza = "jdbc:mysql://olimp.if.pw.edu.pl/pojava";
-		// objasnienie opisu bazy:
-		// jdbc: - mechanizm laczenia z baza (moze byc inny, np. odbc)
-		// mysql: - rodzaj bazy
-		// //olimp.if.pw.edu.pl - adres serwera z baza (moze byc tez w formie adresu IP)
-		// /pojava - nazwa bazy (poniewaz na serwerze moze byc kilka roznych baz...)
-		String user = "pojava";
-		String pass = "Java";
+		String baza = "";
+		String user = "";
+		String pass = "";
 		java.sql.Connection conn = null;
         try {
 			conn=DriverManager.getConnection(baza, user, pass);
-			//rownoznacze z zapisem:
-			//conn=DriverManager.getConnection("jdbc:mysql://olimp.if.pw.edu.pl/pojava?user=pojava&password=Java");
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			System.out.println("Blad przy ladowaniu sterownika bazy!");
 			System.exit(1);
 		}
