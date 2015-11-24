@@ -14,6 +14,7 @@ import javax.jws.WebMethod;
 /**
  * @author kuba hudzik nn
  * @author Michal
+ * @author Łukasz Winkler
  */
 @WebService(serviceName = "Pracownicy")
 public class Pracownicy {
