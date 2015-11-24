@@ -12,7 +12,6 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 
 /**
- * asdfas
  * @author Michal
  */
 @WebService(serviceName = "Pracownicy")
