@@ -12,7 +12,7 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 
 /**
- * @author kuba hudzik
+ * @author kuba hudzik nn
  * @author Michal
  */
 @WebService(serviceName = "Pracownicy")
