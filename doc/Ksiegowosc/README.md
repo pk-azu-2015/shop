@@ -12,7 +12,7 @@ Przechowuje informacje o wszystkich sprzedażach (paragony), zamówieniach (z fa
 | Dodaj zakup        | Lista(kod produktu, cena), kod zakupu            | OneWay    |       | 
 | Wyplaty            | Lista plac                                       | OneWay    |       |
 | Pobierz stan konta |                                                  | Stan konta|       |
-| Pobierz informacje o zakupie |Id sprzedazy                            | Lista(kod produktu,cena) | Nieprawodlowe ID      |
+| Pobierz informacje o zakupie |Id zakupu                               | Lista(kod produktu,cena) | Nieprawodlowe ID      |
 
 ###Opis slowny operacji
 | Operacje  | Opis |
