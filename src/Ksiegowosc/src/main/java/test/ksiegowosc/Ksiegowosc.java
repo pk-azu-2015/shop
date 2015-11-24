@@ -31,11 +31,10 @@ public class Ksiegowosc {
 		}
 		System.out.print(" sterownik OK");
 		
-		// LACZENIE Z BAZA
 		System.out.print("\nLaczenie z baza danych:");
-		String baza = "";
-		String user = "";
-		String pass = "";
+		String baza = "jdbc:mysql://db4free.net/azu2015";
+		String user = "azu2015";
+		String pass = "azu2015";
 		java.sql.Connection conn = null;
         try {
 			conn=DriverManager.getConnection(baza, user, pass);
@@ -46,7 +45,7 @@ public class Ksiegowosc {
 		System.out.print(" polaczenie OK\n");
 		
     }
-    public double StanKonta = 0;
+    public double StanKonta = 0.0;
     //TODO: pobrac inne pliki wsdl, zaimportowac je (prawy -> new -> web service cliennt ...
     //bedziemy mogli z nich korzystac -> dzieki temu dostaniemy liste produktow i liste plac
     /**
