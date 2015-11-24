@@ -18,6 +18,9 @@ import javax.jws.WebParam;
 @WebService(serviceName = "Ksiegowosc")
 public class Ksiegowosc {
 
+    
+    
+    public double StanKonta = 0;
     //TODO: pobrac inne pliki wsdl, zaimportowac je (prawy -> new -> web service cliennt ...
     //bedziemy mogli z nich korzystac -> dzieki temu dostaniemy liste produktow i liste plac
     /**
