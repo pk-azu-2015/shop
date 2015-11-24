@@ -157,9 +157,8 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_stan_konta")
-    public double pobierzStanKonta() {
-        double stanKonta = 0.0;
-        return stanKonta;
+    public double pobierzStanKonta(double stanKonta) {
+        return stanKonta=StanKonta;
     }
 
     /**
