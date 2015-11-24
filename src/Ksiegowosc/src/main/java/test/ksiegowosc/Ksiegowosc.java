@@ -36,12 +36,11 @@ public class Ksiegowosc {
         }
         System.out.print(" sterownik OK");
 
-        // LACZENIE Z BAZA
         System.out.print("\nLaczenie z baza danych:");
-        String baza = "";
-        String user = "";
-        String pass = "";
-        java.sql.Connection conn = null;
+		String baza = "jdbc:mysql://db4free.net/azu2015";
+		String user = "azu2015";
+		String pass = "azu2015";
+		
         try {
             conn = DriverManager.getConnection(baza, user, pass);
         } catch (SQLException e) {
