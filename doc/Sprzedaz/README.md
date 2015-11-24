@@ -13,7 +13,7 @@ Nasza usługa jest usługą końcową przeznaczoną dla końcowego klienta.
 ##3. Opis usługi.
 | Usługa           | Wejście                                          | Wyjście   | Wyjątek |
 | ---------------- | ------------------------------------------------ | -------   | :---: |
-|1. Sprzedaj            | lista(kod_produktu, ilość), id_klienta |  cena, lista(kod_sprzedaży, kod_produktu)  |  brak towaru    |
+|1. Sprzedaj            | lista(kod_produktu, ilość), id_klienta |  kod_sprzedaży, lista(cena, kod_produktu)  |  brak towaru    |
 |2.  Naprawa gwarancyjna     |      kod_sprzedaży, kod_produktu    | naprawa, zwrot_pięniedzy   |   nieuznanie gwarancji |
 |3.  Zwroty      | kod_sprzedaży, kod_produktu         | zwrot pieniędzy   |    nie uwzględnienie zwrotu  |
 
