@@ -21,8 +21,6 @@ import javax.jws.WebMethod;
 @WebService(serviceName = "Pracownicy")
 public class Pracownicy {
 
-    public class Ksiegowosc {
-    
     public void polaczenieZBaza(){
         // LADOWANIE STEROWNIKA
 		System.out.print("Sprawdzanie sterownika:");
@@ -71,3 +69,4 @@ public class Pracownicy {
         return lista;
     }
 }
+    
