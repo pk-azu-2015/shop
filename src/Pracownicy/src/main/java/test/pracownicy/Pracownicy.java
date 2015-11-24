@@ -5,6 +5,8 @@
  */
 package test.pracownicy;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.Oneway;
@@ -12,13 +14,39 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 
 /**
- *
+ * @author kuba hudzik nn
  * @author Michal
+ * @author Łukasz Winkler
  */
 @WebService(serviceName = "Pracownicy")
 public class Pracownicy {
 
-      
+    public void polaczenieZBaza(){
+        // LADOWANIE STEROWNIKA
+		System.out.print("Sprawdzanie sterownika:");
+        try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			System.out.println("Blad przy ladowaniu sterownika bazy!");
+			System.exit(1);
+		}
+		System.out.print(" sterownik OK");
+		
+		// LACZENIE Z BAZA
+		System.out.print("\nLaczenie z baza danych:");
+		String baza = "jdbc:mysql://db4free.net/azu2015";
+		String user = "azu2015";
+		String pass = "azu2015";
+		java.sql.Connection conn = null;
+        try {
+			conn=DriverManager.getConnection(baza, user, pass);
+			} catch (SQLException e) {
+			System.out.println("Blad przy ladowaniu sterownika bazy!");
+			System.exit(1);
+		}
+		System.out.print(" polaczenie OK\n");
+		
+    }  
     
     @WebMethod(operationName = "Dodaj")
     public String Dodaj(String imie, String nazwisko, 
@@ -41,3 +69,4 @@ public class Pracownicy {
         return lista;
     }
 }
+    

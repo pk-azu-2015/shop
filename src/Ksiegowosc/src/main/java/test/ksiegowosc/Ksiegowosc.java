@@ -1,5 +1,12 @@
-package azu.maven.ksiegowosc;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package test.ksiegowosc;
 
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
@@ -12,16 +19,44 @@ import javax.jws.WebParam;
  */
 @WebService(serviceName = "Ksiegowosc")
 public class Ksiegowosc {
-
+    
+    public void polaczenieZBaza(){
+        // LADOWANIE STEROWNIKA
+		System.out.print("Sprawdzanie sterownika:");
+        try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+			System.out.println("Blad przy ladowaniu sterownika bazy!");
+			System.exit(1);
+		}
+		System.out.print(" sterownik OK");
+		
+		// LACZENIE Z BAZA
+		System.out.print("\nLaczenie z baza danych:");
+		String baza = "";
+		String user = "";
+		String pass = "";
+		java.sql.Connection conn = null;
+        try {
+			conn=DriverManager.getConnection(baza, user, pass);
+			} catch (SQLException e) {
+			System.out.println("Blad przy ladowaniu sterownika bazy!");
+			System.exit(1);
+		}
+		System.out.print(" polaczenie OK\n");
+		
+    }
+    public double StanKonta = 0;
     //TODO: pobrac inne pliki wsdl, zaimportowac je (prawy -> new -> web service cliennt ...
     //bedziemy mogli z nich korzystac -> dzieki temu dostaniemy liste produktow i liste plac
     /**
      * Funkcja dodajaca nowa sprzedaz do ksiegowosci
      *
+     * @param produkt
      * @param kodSprzedazy
      */
     @WebMethod(operationName = "dodaj_sprzedaz")
-    public void dodajSprzedaz(/*@WebParam(name = "produkt") List<Produkt> produkt,*/@WebParam(name = "kodSprzedazy") int kodSprzedazy) {
+    public void dodajSprzedaz(@WebParam(name = "produkt") List<Produkt> produkt,@WebParam(name = "kodSprzedazy") int kodSprzedazy) {
         //zamiast List<Produkt> produkt, moze List<Pair<Integer, Double>> produkt ??
         System.out.println("Ok - dodaj_sprzedaz");
     }
@@ -29,10 +64,11 @@ public class Ksiegowosc {
     /**
      * Funkcja dodajaca nowy zakup do ksiegowosci
      *
+     * @param produkt
      * @param kodZakupu
      */
     @WebMethod(operationName = "dodaj_zakup")
-    public void dodajZakup(/*@WebParam(name = "produkt") List<Produkt> produkt,*/@WebParam(name = "kodZakupu") int kodZakupu) {
+    public void dodajZakup(@WebParam(name = "produkt") List<Produkt> produkt,@WebParam(name = "kodZakupu") int kodZakupu) {
         //zamiast List<Produkt> produkt, moze List<Pair<Integer, Double>> produkt ??
         System.out.println("Ok - dodaj_zakup");
     }
@@ -52,11 +88,9 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_stan_konta")
-    public List<Integer> /*List<ListaPlac> */ pobierzStanKonta() {
-        //List<ListaPlac> tmp = new ArrayList<>();
-        //klient ktory bedzie pobieral z 
-        List<Integer> tmp = new ArrayList<>();
-        return tmp;
+    public double pobierzStanKonta() {
+        double stanKonta = 0.0;
+        return stanKonta;
     }
 
     /**
@@ -67,9 +101,8 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_info_o_zakupie")
-    public List<Integer>/*List<Produkt>*/ pobierzInfoZakup(@WebParam(name = "idSprzedazy") int idSprzedazy) {
-        //List<Produkt> tmp = new ArrayList<>();
-        List<Integer> tmp = new ArrayList<>();
+    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idSprzedazy") int idSprzedazy) {
+        List<Produkt> tmp = new ArrayList<>();
         if (/*!tmp.find(idSprzedazy)*/false) {
             return null;
         } else {

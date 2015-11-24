@@ -13,6 +13,13 @@ public class Produkt {
     private long kodProduktu;
     private BigDecimal cena;
 
+    public Produkt(long kodProduktu, String nazwa, String opis, BigDecimal cena) {
+        this.nazwa = nazwa;
+        this.kodProduktu = kodProduktu;
+        this.opis = opis;
+        this.cena = cena;
+    }
+
     public String getNazwa() {
         return nazwa;
     }
@@ -44,4 +51,5 @@ public class Produkt {
     public void setCena(BigDecimal cena) {
         this.cena = cena;
     }
+
 }
