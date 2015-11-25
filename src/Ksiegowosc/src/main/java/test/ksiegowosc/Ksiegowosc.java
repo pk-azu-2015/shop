@@ -6,12 +6,11 @@
 package test.ksiegowosc;
 
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -37,10 +36,10 @@ public class Ksiegowosc {
         System.out.print(" sterownik OK");
 
         System.out.print("\nLaczenie z baza danych:");
-		String baza = "jdbc:mysql://db4free.net/azu2015";
-		String user = "azu2015";
-		String pass = "azu2015";
-		
+        String baza = "jdbc:mysql://db4free.net/azu2015";
+        String user = "azu2015";
+        String pass = "azu2015";
+
         try {
             conn = DriverManager.getConnection(baza, user, pass);
         } catch (SQLException e) {
@@ -77,24 +76,9 @@ public class Ksiegowosc {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         } finally {
-
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
+            closeConnection(statement);
         }
-        
+
         System.out.println("Ok - dodaj_sprzedaz");
     }
 
@@ -121,22 +105,7 @@ public class Ksiegowosc {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         } finally {
-
-            if (statement != null) {
-                try {
-                    statement.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
+            closeConnection(statement);
         }
 
         System.out.println("Ok - dodaj_zakup");
@@ -157,8 +126,43 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_stan_konta")
-    public double pobierzStanKonta(double stanKonta) {
-        return stanKonta=StanKonta;
+    public double pobierzStanKonta() {
+        double stanKonta = 0.0;
+        return stanKonta;
+    }
+
+    /**
+     * Funkcja odpowiedzialna za sprawdzenie wybranego paragonu/faktury
+     * zakupu/sprzedazy
+     *
+     * @param idZakupu
+     * @return
+     */
+    @WebMethod(operationName = "pobierz_info_o_zakupie")
+    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idZakupu") int idZakupu) {
+        List<Produkt> produkt = new ArrayList<>();
+
+        polaczenieZBaza();
+        Statement statement = null;
+
+        try {
+            statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery("select from Zakup where kod_sprzedazy = " + idZakupu + ";");
+
+            while (rs.next()) {
+                Produkt tmp = new Produkt();
+                tmp.setKodProduktu(rs.getInt("kod_produktu"));
+                tmp.setCena(rs.getFloat("cena"));
+                produkt.add(tmp);
+            }
+            rs.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            closeConnection(statement);
+        }
+
+        return produkt;
     }
 
     /**
@@ -168,13 +172,48 @@ public class Ksiegowosc {
      * @param idSprzedazy
      * @return
      */
-    @WebMethod(operationName = "pobierz_info_o_zakupie")
-    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idSprzedazy") int idSprzedazy) {
-        List<Produkt> tmp = new ArrayList<>();
-        if (/*!tmp.find(idSprzedazy)*/false) {
-            return null;
-        } else {
-            return tmp;
+    @WebMethod(operationName = "pobierz_info_o_sprzedazy")
+    public List<Produkt> pobierzInfoSprzedaz(@WebParam(name = "idSprzedazy") int idSprzedazy) {
+        List<Produkt> produkt = new ArrayList<>();
+
+        polaczenieZBaza();
+        Statement statement = null;
+
+        try {
+            statement = conn.createStatement();
+            ResultSet rs = statement.executeQuery("select from Sprzedaz where kod_sprzedazy = " + idSprzedazy + ";");
+
+            while (rs.next()) {
+                Produkt tmp = new Produkt();
+                tmp.setKodProduktu(rs.getInt("kod_produktu"));
+                tmp.setCena(rs.getFloat("cena"));
+                produkt.add(tmp);
+            }
+            rs.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            closeConnection(statement);
+        }
+
+        return produkt;
+    }
+
+    private void closeConnection(Statement statement) {
+        if (statement != null) {
+            try {
+                statement.close();
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
         }
     }
 }
