@@ -7,7 +7,7 @@ package test.pracownicy;
 
 /**
  *
- * @author Michal
+ * @author Michal 
  */
 public class ListaPlac {
     private String pesel;
