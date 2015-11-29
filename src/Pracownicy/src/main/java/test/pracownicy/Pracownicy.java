@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author Kuba Hudzik
- * @author Michal Szalenie
+ * @author Michal Szalenie 
  * @author Łukasz Winkler
  */
 @WebService(serviceName = "Pracownicy")
