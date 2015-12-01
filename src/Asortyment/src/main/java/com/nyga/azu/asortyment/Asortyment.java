@@ -11,13 +11,13 @@ import javax.xml.ws.WebServiceRef;
 
 @WebService(serviceName = "asortyment")
 public class Asortyment {
-
+    
     private List<Produkt> listaProduktow = new ArrayList();
 
     private void init() {
         listaProduktow.add(new Produkt(12345, "mlotek", "bardzo dobry mlotek", BigDecimal.valueOf(19.99)));
         listaProduktow.add(new Produkt(12346, "deska", "bardzo dobra deska", BigDecimal.valueOf(39.99)));
-        listaProduktow.add(new Produkt(12346, "gwozdz", "bardzo dobry gwozdz", BigDecimal.valueOf(0.16)));
+        listaProduktow.add(new Produkt(12347, "gwozdz", "bardzo dobry gwozdz", BigDecimal.valueOf(0.16)));
     }
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Magazyn/Magazyn.wsdl")
