@@ -12,7 +12,15 @@ import javax.xml.ws.WebServiceRef;
 @WebService(serviceName = "asortyment")
 public class Asortyment {
 
-    @WebServiceRef(wsdlLocation = "wsdl/localhost_8080/Magazyn/Magazyn.wsdl")
+    private List<Produkt> listaProduktow = new ArrayList();
+
+    private void init() {
+        listaProduktow.add(new Produkt(12345, "mlotek", "bardzo dobry mlotek", BigDecimal.valueOf(19.99)));
+        listaProduktow.add(new Produkt(12346, "deska", "bardzo dobra deska", BigDecimal.valueOf(39.99)));
+        listaProduktow.add(new Produkt(12346, "gwozdz", "bardzo dobry gwozdz", BigDecimal.valueOf(0.16)));
+    }
+
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Magazyn/Magazyn.wsdl")
     private Magazyn_Service service;
 
     @Oneway
@@ -21,25 +29,27 @@ public class Asortyment {
             @WebParam(name = "nazwa") String nazwa,
             @WebParam(name = "opis") String opis,
             @WebParam(name = "cena") BigDecimal cena) {
+
+        if (listaProduktow.isEmpty()) {
+            init();
+        }
         
-        //todo
+        listaProduktow.add(new Produkt(kodProduktu, null, null, null));
     }
 
     @Oneway
     @WebMethod(operationName = "usunProdukt")
     public void usunProdukt(@WebParam(name = "kodProduktu") int kodProduktu) {
-        //przykladowan alista
-        List<Produkt> listaProduktow = new ArrayList();
-        listaProduktow.add(new Produkt(12345, "mlotek", "bardzo dobry mlotek", BigDecimal.valueOf(19.99)));
-        listaProduktow.add(new Produkt(12346, "deska", "bardzo dobra deska", BigDecimal.valueOf(39.99)));
-        listaProduktow.add(new Produkt(12346, "gwozdz", "bardzo dobry gwozdz", BigDecimal.valueOf(0.16)));
+
+        if (listaProduktow.isEmpty()) {
+            init();
+        }
 
         int isProdExist = 1;
         try {
             Magazyn port = service.getMagazynPort();
             isProdExist = port.wyswietlStan(kodProduktu);
         } catch (Exception ex) {
-            // TODO handle custom exceptions here
             System.out.println(ex);
         }
 
@@ -51,7 +61,6 @@ public class Asortyment {
                 }
             }
         }
-//        System.out.println("check this out " + listaProduktow.get(0));
     }
 
     @WebMethod(operationName = "pobierzListe")
@@ -59,11 +68,11 @@ public class Asortyment {
             @WebParam(name = "nazwa") String nazwa,
             @WebParam(name = "opis") String opis,
             @WebParam(name = "cena") BigDecimal cena) {
-        
-        System.out.println("pobieranie listy");
 
-        //todo
-        List listaProduktow = new ArrayList();
+        if (listaProduktow.isEmpty()) {
+            init();
+        }
+
         return listaProduktow;
     }
 }
