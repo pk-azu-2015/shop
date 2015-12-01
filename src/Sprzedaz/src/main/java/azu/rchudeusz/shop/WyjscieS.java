@@ -10,23 +10,23 @@ import java.util.List;
 
 public class WyjscieS {
 
-    BigDecimal cena;
     List<Item> lista;
+    long kodSprzedazy;
 
     public WyjscieS() {
     }
 
-    public WyjscieS(BigDecimal cena, List<Item> lista) {
-        this.cena = cena;
+    public WyjscieS(List<Item> lista, long cena) {
+        this.kodSprzedazy = cena;
         this.lista = lista;
     }
 
-    public BigDecimal getCena() {
-        return cena;
+    public long getCena() {
+        return kodSprzedazy;
     }
 
-    public void setCena(BigDecimal cena) {
-        this.cena = cena;
+    public void setCena(long kodSprzedazy) {
+        this.kodSprzedazy = kodSprzedazy;
     }
 
     public List<Item> getLista() {
@@ -37,9 +37,6 @@ public class WyjscieS {
         this.lista = lista;
     }
 
-    @Override
-    public String toString() {
-        return "WyjscieS{" + "cena=" + cena + ", lista=" + lista + '}';
-    }
+
 
 }

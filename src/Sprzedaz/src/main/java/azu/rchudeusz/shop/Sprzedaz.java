@@ -20,26 +20,31 @@ public class Sprzedaz {
     //List<Pair<String, Integer>> list;
     
     @WebMethod(operationName = "sprzedaj")
-    public WyjscieS sprzedaj(@WebParam(name = "id_klienta") long id_klienta, @WebParam(name = "list") List<Item2> list) {
+    public WyjscieS sprzedaj(@WebParam(name = "list") List<Item2> list, @WebParam(name = "id_klienta") long id_klienta) {
 
         //do implementacji
         //WyjscieS sp1 = new WyjscieS(1.0,new List<Item>);
         //WyjscieS sp1 = new WyjscieS(4.5, new List<Item>());
         List<Item> listTmp= new ArrayList<Item>();
         for (int i=0; i<list.size(); i++) {
-            listTmp.add(new Item(new Random().nextLong(),list.get(i).getKod_produktu()));
+            listTmp.add(new Item(list.get(i).getKod_produktu(),
+            BigDecimal.valueOf(new Random().nextDouble()*list.get(1).getIlosc())));
         }
-        //zamiast pobierania ceny i ilosci towaru losujemy wartosc zakupow
-        BigDecimal cena = BigDecimal.valueOf(new Random().nextDouble());
-        WyjscieS sp1 = new WyjscieS(cena, listTmp);
+        //losowanie kodu sprzedaży
+        long kodSprzedazy = new Random().nextLong();
+        //trzeba sprzawdzic metoda Pobierz informacje o zakupie czy id juz nie jest w bazie
+        WyjscieS sp1 = new WyjscieS(listTmp, kodSprzedazy);
+        //wywolanie metody Dodaj sprzedaż
+        
 
         return sp1;
     }
 
     @WebMethod(operationName = "naprawa_gwarancyjna")
-    public WyjscieN naprawa_gwarancyjna(@WebParam(name = "kod_sprzedazy") long kod_sprzedazy, @WebParam(name = "kod_produktu") long kod_produktu) {
+    public WyjscieN naprawa_gwarancyjna(@WebParam(name = "kod_sprzedazy") long kod_sprzedazy,
+            @WebParam(name = "kod_produktu") long kod_produktu) {
 
-        
+        //przy uzyciu Pobierz informacje o zakupie sprawdzic czy podany kod_produktu był faktycznie sprzedany
         //do implementacji
         WyjscieN sn1 = new WyjscieN(new Random().nextBoolean(), new Random().nextBoolean());
 
@@ -47,7 +52,9 @@ public class Sprzedaz {
     }
 
     @WebMethod(operationName = "zwroty")
-    public Boolean zwroty(@WebParam(name = "kod_sprzedazy") long kod_sprzedazy, @WebParam(name = "kod_produktu") long kod_produktu) {
+    public Boolean zwroty(@WebParam(name = "kod_sprzedazy") long kod_sprzedazy, 
+            @WebParam(name = "kod_produktu") long kod_produktu) {
+        //przy uzyciu Pobierz informacje o zakupie sprawdzic czy podany kod_produktu był faktycznie sprzedany
         Random a = new Random();
         return a.nextBoolean();
     }
