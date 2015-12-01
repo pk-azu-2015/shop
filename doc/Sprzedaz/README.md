@@ -13,7 +13,7 @@ Nasza usługa jest usługą końcową przeznaczoną dla końcowego klienta.
 ##3. Opis usługi.
 | Usługa           | Wejście                                          | Wyjście   | Wyjątek |
 | ---------------- | ------------------------------------------------ | -------   | :---: |
-|1. Sprzedaj            | lista(kod_produktu, ilość), id_klienta |  kod_sprzedaży, lista(cena, kod_produktu)  |  brak towaru    |
+|1. Sprzedaj            | lista(kod_produktu, ilość), id_klienta |  lista(kod_produktu, cena), kod_sprzedaży   |  brak towaru    |
 |2.  Naprawa gwarancyjna     |      kod_sprzedaży, kod_produktu    | naprawa, zwrot_pięniedzy   |   nieuznanie gwarancji |
 |3.  Zwroty      | kod_sprzedaży, kod_produktu         | zwrot pieniędzy   |    nie uwzględnienie zwrotu  |
 
@@ -53,7 +53,7 @@ To Do.
 * Przykład użycia, use case, diagramy sekwencji etc.
 
 
-![alt text](http://i.imgur.com/dwnz1MR.png "Diagram klas usługi Sprzedaż")
+![alt text](http://i66.tinypic.com/33f4z6d.jpg "Diagram klas usługi Sprzedaż")
 
 
 ![alt text](http://i.imgur.com/lQBw2Tl.png "Diagram UML wszystkich usug")
@@ -71,4 +71,5 @@ To Do.
 ##6. Change log.
 
     * 20.10.2015 - dodanie pliku README.md, dodanie operacji i opis usługi, osób odpowiedzialnych za usług, powiązanie z innymi usługami
+    * 01.12.2015 - zmiana parametrów formalnych funkcji sprzedaz, aktualizacja diagramu klas.
 
