@@ -33,6 +33,7 @@ public class Sprzedaz {
         //losowanie kodu sprzedaży
         long kodSprzedazy = new Random().nextLong();
         //trzeba sprzawdzic metoda Pobierz informacje o zakupie czy id juz nie jest w bazie
+        
         WyjscieS sp1 = new WyjscieS(listTmp, kodSprzedazy);
         //wywolanie metody Dodaj sprzedaż
         
