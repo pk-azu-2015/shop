@@ -60,13 +60,13 @@ public class Ksiegowosc {
      * @param kodSprzedazy
      */
     @WebMethod(operationName = "dodaj_sprzedaz")
-    public void dodajSprzedaz(@WebParam(name = "produkt") List<Produkt> produkt, @WebParam(name = "kodSprzedazy") int kodSprzedazy) {
+    public void dodajSprzedaz(@WebParam(name = "produkt") List<Produkt> produkt, @WebParam(name = "kodSprzedazy") long kodSprzedazy) {
         polaczenieZBaza();
         Statement statement = null;
         try {
             statement = conn.createStatement();
             for (Produkt pr : produkt) {
-                statement.executeUpdate("INSERT into Zakup "
+                statement.executeUpdate("INSERT into Sprzedaz "
                         + "(kod_sprzedazy, kod_produktu, cena) values"
                         + "(" + kodSprzedazy + ", "
                         + pr.getKodProduktu() + ", "
@@ -152,7 +152,7 @@ public class Ksiegowosc {
             while (rs.next()) {
                 Produkt tmp = new Produkt();
                 tmp.setKodProduktu(rs.getInt("kod_produktu"));
-                tmp.setCena(rs.getFloat("cena"));
+                tmp.setCena(rs.getBigDecimal("cena"));
                 produkt.add(tmp);
             }
             rs.close();
@@ -173,7 +173,7 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_info_o_sprzedazy")
-    public List<Produkt> pobierzInfoSprzedaz(@WebParam(name = "idSprzedazy") int idSprzedazy) {
+    public List<Produkt> pobierzInfoSprzedaz(@WebParam(name = "idSprzedazy") long idSprzedazy) {
         List<Produkt> produkt = new ArrayList<>();
 
         polaczenieZBaza();
@@ -186,7 +186,7 @@ public class Ksiegowosc {
             while (rs.next()) {
                 Produkt tmp = new Produkt();
                 tmp.setKodProduktu(rs.getInt("kod_produktu"));
-                tmp.setCena(rs.getFloat("cena"));
+                tmp.setCena(rs.getBigDecimal("cena"));
                 produkt.add(tmp);
             }
             rs.close();

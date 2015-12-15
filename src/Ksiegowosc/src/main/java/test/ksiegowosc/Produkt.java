@@ -5,27 +5,29 @@
  */
 package test.ksiegowosc;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author Michal
  */
 public class Produkt {
-    private int kodProduktu;
-    private double cena;
+    private long kodProduktu;
+    private BigDecimal cena;
 
-    public int getKodProduktu() {
+    public long getKodProduktu() {
         return kodProduktu;
     }
 
-    public void setKodProduktu(int kodProduktu) {
+    public void setKodProduktu(long kodProduktu) {
         this.kodProduktu = kodProduktu;
     }
 
-    public double getCena() {
+    public BigDecimal getCena() {
         return cena;
     }
 
-    public void setCena(double cena) {
+    public void setCena(BigDecimal cena) {
         this.cena = cena;
     }
 }
