@@ -7,10 +7,10 @@ import java.math.BigDecimal;
  * @author nyga
  */
 public class Produkt {
-
+ private long kodProduktu; 
     private String nazwa;
     private String opis;
-    private long kodProduktu;
+   
     private BigDecimal cena;
 
     public Produkt(long kodProduktu, String nazwa, String opis, BigDecimal cena) {

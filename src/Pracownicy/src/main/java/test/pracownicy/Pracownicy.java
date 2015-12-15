@@ -93,6 +93,21 @@ public class Pracownicy {
     @WebMethod(operationName = "Edytuj")
     public void Edytuj(String imie, String nazwisko,
                        String adres, String stanowisko, String pensja) {
+        
+        polaczenieZBaza();
+        Statement stat = null;
+        try {
+            stat = conn.createStatement();
+            stat.executeQuery(
+                    
+                    "UPDATE Pracownicy SET imie="+imie+"nazwisko="+nazwisko+
+                            "adres="+adres+"stanowisko="+stanowisko+"pensja="+pensja+";");
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            closeConnection(stat);
+        }
 
     }
 
