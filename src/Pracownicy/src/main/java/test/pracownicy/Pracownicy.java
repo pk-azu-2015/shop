@@ -60,7 +60,9 @@ public class Pracownicy {
         try {
             stat = conn.createStatement();
             stat.executeQuery(
-                    "INSERT INTO Pracownicy (imie, nazwisko, adres, pesel, stanowisko, pensja) VALUES ("+imie +","+ nazwisko +","+ adres +","+ pesel +","+ stanowisko +","+ pensja+");");
+                    "INSERT INTO Pracownicy (imie, nazwisko, adres, pesel, stanowisko, pensja) VALUES "
+                                        + "("+imie +","+ nazwisko +","+ adres +","+ pesel 
+                                        +","+ stanowisko +","+ pensja+");");
         }
         catch (SQLException e) {
             e.printStackTrace();
