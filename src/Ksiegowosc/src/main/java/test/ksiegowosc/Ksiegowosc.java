@@ -139,7 +139,7 @@ public class Ksiegowosc {
      * @return
      */
     @WebMethod(operationName = "pobierz_info_o_zakupie")
-    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idZakupu") int idZakupu) {
+    public List<Produkt> pobierzInfoZakup(@WebParam(name = "idZakupu") long idZakupu) {
         List<Produkt> produkt = new ArrayList<>();
 
         polaczenieZBaza();
