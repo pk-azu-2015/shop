@@ -66,6 +66,8 @@ public class Pracownicy {
         }
         catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            closeConnection(stat);
         }
         return pesel;
     }
@@ -82,6 +84,8 @@ public class Pracownicy {
         }
         catch (SQLException e) {
             e.printStackTrace();
+        }finally {
+            closeConnection(stat);
         }
     }
 
@@ -96,5 +100,25 @@ public class Pracownicy {
     public List<ListaPlac> pobierzListePlac() {
         List<ListaPlac> lista = new ArrayList<>();
         return lista;
+    }
+    
+    
+    
+    private void closeConnection(Statement statement) {
+        if (statement != null) {
+            try {
+                statement.close();
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
     }
 }
