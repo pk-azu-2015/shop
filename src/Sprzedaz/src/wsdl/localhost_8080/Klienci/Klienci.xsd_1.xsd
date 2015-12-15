@@ -30,7 +30,7 @@
 
 <xs:complexType name="dodaj_do_historii_zakupow">
 <xs:sequence>
-<xs:element name="kodSprzedazy" type="xs:int"/>
+<xs:element name="kodSprzedazy" type="xs:long"/>
 <xs:element name="PESEL" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
@@ -41,6 +41,15 @@
 
 <xs:complexType name="polaczenieDoBazyDanychResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="edytuj_klienta">
+<xs:sequence>
+<xs:element name="imie" type="xs:string" minOccurs="0"/>
+<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
+<xs:element name="adres" type="xs:string" minOccurs="0"/>
+<xs:element name="nrTel" type="xs:int"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="dodaj_klienta">
@@ -56,15 +65,6 @@
 
 <xs:complexType name="dodaj_klientaResponse">
 <xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="edytuj_klienta">
-<xs:sequence>
-<xs:element name="imie" type="xs:string" minOccurs="0"/>
-<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
-<xs:element name="adres" type="xs:string" minOccurs="0"/>
-<xs:element name="nrTel" type="xs:int"/>
-</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="usun">

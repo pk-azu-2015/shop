@@ -8,6 +8,7 @@ import javax.jws.WebParam;
 import java.util.List;
 import java.util.Random;
 import javax.xml.ws.WebServiceRef;
+import test.Klienci_Service;
 import test.ksiegowosc.Ksiegowosc_Service;
 
 /**
@@ -17,6 +18,8 @@ import test.ksiegowosc.Ksiegowosc_Service;
 
 @WebService(serviceName = "Sprzedaz")
 public class Sprzedaz {
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Klienci/Klienci.wsdl")
+    private Klienci_Service service_1;
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/Ksiegowosc/Ksiegowosc.wsdl")
     private Ksiegowosc_Service service;
     
@@ -57,8 +60,8 @@ public class Sprzedaz {
             tmp=new test.ksiegowosc.Produkt();
             java.util.List<test.ksiegowosc.Produkt> produkt = new java.util.LinkedList<test.ksiegowosc.Produkt>();
             for (int i=0; i<listTmp.size(); i++) {
-                tmp.setKodProduktu((int) listTmp.get(i).getKod_produktu()); //wyrzucic rzutowanie jak poprawi Ksiegowosc
-                tmp.setCena(listTmp.get(i).getCena().intValue());  //wyrzucic intValue jak poprawi Ksiegowosc
+                tmp.setKodProduktu(listTmp.get(i).getKod_produktu()); //wyrzucic rzutowanie jak poprawi Ksiegowosc
+                tmp.setCena(listTmp.get(i).getCena());  //wyrzucic intValue jak poprawi Ksiegowosc
                 produkt.add(tmp);
             }
             //long kodSprzedazy = 0;
@@ -69,7 +72,13 @@ public class Sprzedaz {
 
 
         //wywołanie metody Dodaj do historii zakupów z Klienci
-        //Brak implementacji ze strony modułu Klienci
+        try { // Call Web Service Operation
+            test.Klienci port = service_1.getKlienciPort();
+            // TODO initialize WS operation arguments here
+            port.dodajDoHistoriiZakupow(kodSprzedazy, id_klienta);
+        } catch (Exception ex) {
+            // TODO handle custom exceptions here
+        }
         
 
         return sp1;
@@ -83,7 +92,7 @@ public class Sprzedaz {
         try { // Call Web Service Operation
             test.ksiegowosc.Ksiegowosc port = service.getKsiegowoscPort();
             // TODO initialize WS operation arguments here
-            int idSprzedazy = 0;
+            int idSprzedazy = (int) kod_sprzedazy;  //***wyrzucic rzutowanie jak poprawi ksiegowosc****
             // TODO process result here
             java.util.List<test.ksiegowosc.Produkt> result = port.pobierzInfoOSprzedazy(idSprzedazy);
             System.out.println("Kod sprzedazy istnieje, zakupiono nastepujace produkty"+result);

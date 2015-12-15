@@ -45,14 +45,14 @@
 <xs:complexType name="dodaj_sprzedaz">
 <xs:sequence>
 <xs:element name="produkt" type="tns:produkt" minOccurs="0" maxOccurs="unbounded"/>
-<xs:element name="kodSprzedazy" type="xs:int"/>
+<xs:element name="kodSprzedazy" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="produkt">
 <xs:sequence>
-<xs:element name="cena" type="xs:double"/>
-<xs:element name="kodProduktu" type="xs:int"/>
+<xs:element name="cena" type="xs:decimal" minOccurs="0"/>
+<xs:element name="kodProduktu" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -62,7 +62,7 @@
 
 <xs:complexType name="pobierz_info_o_zakupie">
 <xs:sequence>
-<xs:element name="idZakupu" type="xs:int"/>
+<xs:element name="idZakupu" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -85,7 +85,7 @@
 
 <xs:complexType name="pobierz_info_o_sprzedazy">
 <xs:sequence>
-<xs:element name="idSprzedazy" type="xs:int"/>
+<xs:element name="idSprzedazy" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
 
