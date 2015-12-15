@@ -4,14 +4,17 @@
 <xsd:import namespace="http://test/" schemaLocation="http://localhost:8080/Klienci/Klienci?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="dodaj_klienta">
-<part name="parameters" element="tns:dodaj_klienta"/>
+<message name="polaczenieDoBazyDanych">
+<part name="parameters" element="tns:polaczenieDoBazyDanych"/>
 </message>
-<message name="dodaj_klientaResponse">
-<part name="parameters" element="tns:dodaj_klientaResponse"/>
+<message name="polaczenieDoBazyDanychResponse">
+<part name="parameters" element="tns:polaczenieDoBazyDanychResponse"/>
 </message>
-<message name="usun_klienta">
-<part name="parameters" element="tns:usun_klienta"/>
+<message name="dodaj_do_historii_zakupow">
+<part name="parameters" element="tns:dodaj_do_historii_zakupow"/>
+</message>
+<message name="usun">
+<part name="parameters" element="tns:usun"/>
 </message>
 <message name="edytuj_klienta">
 <part name="parameters" element="tns:edytuj_klienta"/>
@@ -22,16 +25,22 @@
 <message name="oblicz_rabatResponse">
 <part name="parameters" element="tns:oblicz_rabatResponse"/>
 </message>
-<message name="dodaj_do_historii_zakupow">
-<part name="parameters" element="tns:dodaj_do_historii_zakupow"/>
+<message name="dodaj_klienta">
+<part name="parameters" element="tns:dodaj_klienta"/>
+</message>
+<message name="dodaj_klientaResponse">
+<part name="parameters" element="tns:dodaj_klientaResponse"/>
 </message>
 <portType name="Klienci">
-<operation name="dodaj_klienta">
-<input wsam:Action="http://test/Klienci/dodaj_klientaRequest" message="tns:dodaj_klienta"/>
-<output wsam:Action="http://test/Klienci/dodaj_klientaResponse" message="tns:dodaj_klientaResponse"/>
+<operation name="polaczenieDoBazyDanych">
+<input wsam:Action="http://test/Klienci/polaczenieDoBazyDanychRequest" message="tns:polaczenieDoBazyDanych"/>
+<output wsam:Action="http://test/Klienci/polaczenieDoBazyDanychResponse" message="tns:polaczenieDoBazyDanychResponse"/>
 </operation>
-<operation name="usun_klienta">
-<input wsam:Action="http://test/Klienci/usun_klienta" message="tns:usun_klienta"/>
+<operation name="dodaj_do_historii_zakupow">
+<input wsam:Action="http://test/Klienci/dodaj_do_historii_zakupow" message="tns:dodaj_do_historii_zakupow"/>
+</operation>
+<operation name="usun">
+<input wsam:Action="http://test/Klienci/usun" message="tns:usun"/>
 </operation>
 <operation name="edytuj_klienta">
 <input wsam:Action="http://test/Klienci/edytuj_klienta" message="tns:edytuj_klienta"/>
@@ -40,13 +49,14 @@
 <input wsam:Action="http://test/Klienci/oblicz_rabatRequest" message="tns:oblicz_rabat"/>
 <output wsam:Action="http://test/Klienci/oblicz_rabatResponse" message="tns:oblicz_rabatResponse"/>
 </operation>
-<operation name="dodaj_do_historii_zakupow">
-<input wsam:Action="http://test/Klienci/dodaj_do_historii_zakupow" message="tns:dodaj_do_historii_zakupow"/>
+<operation name="dodaj_klienta">
+<input wsam:Action="http://test/Klienci/dodaj_klientaRequest" message="tns:dodaj_klienta"/>
+<output wsam:Action="http://test/Klienci/dodaj_klientaResponse" message="tns:dodaj_klientaResponse"/>
 </operation>
 </portType>
 <binding name="KlienciPortBinding" type="tns:Klienci">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="dodaj_klienta">
+<operation name="polaczenieDoBazyDanych">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -55,7 +65,13 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="usun_klienta">
+<operation name="dodaj_do_historii_zakupow">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
+<operation name="usun">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -76,11 +92,14 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="dodaj_do_historii_zakupow">
+<operation name="dodaj_klienta">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
 </input>
+<output>
+<soap:body use="literal"/>
+</output>
 </operation>
 </binding>
 <service name="Klienci">

@@ -99,8 +99,8 @@
                             <wsdlFiles>
                                 <wsdlFile>localhost_8080/Ksiegowosc/Ksiegowosc.wsdl</wsdlFile>
                             </wsdlFiles>
-                            <packageName>azu.rchudeusz.shop</packageName>
-                            <wsdlLocation>http://localhost:8080/Ksiegowosc/Ksiegowosc?wsdl</wsdlLocation>
+                            <packageName></packageName>
+                            <wsdlLocation>http://localhost:8080//Ksiegowosc/Ksiegowosc?wsdl</wsdlLocation>
                             <staleFile>${project.build.directory}/jaxws/stale/Ksiegowosc.stale</staleFile>
                         </configuration>
                         <id>wsimport-generate-Ksiegowosc</id>

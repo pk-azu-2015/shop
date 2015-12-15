@@ -4,24 +4,6 @@
 <xsd:import namespace="http://ksiegowosc.test/" schemaLocation="http://localhost:8080/Ksiegowosc/Ksiegowosc?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="wyplaty">
-<part name="parameters" element="tns:wyplaty"/>
-</message>
-<message name="wyplatyResponse">
-<part name="parameters" element="tns:wyplatyResponse"/>
-</message>
-<message name="dodaj_zakup">
-<part name="parameters" element="tns:dodaj_zakup"/>
-</message>
-<message name="dodaj_zakupResponse">
-<part name="parameters" element="tns:dodaj_zakupResponse"/>
-</message>
-<message name="dodaj_sprzedaz">
-<part name="parameters" element="tns:dodaj_sprzedaz"/>
-</message>
-<message name="dodaj_sprzedazResponse">
-<part name="parameters" element="tns:dodaj_sprzedazResponse"/>
-</message>
 <message name="pobierz_stan_konta">
 <part name="parameters" element="tns:pobierz_stan_konta"/>
 </message>
@@ -40,19 +22,25 @@
 <message name="pobierz_info_o_sprzedazyResponse">
 <part name="parameters" element="tns:pobierz_info_o_sprzedazyResponse"/>
 </message>
+<message name="dodaj_sprzedaz">
+<part name="parameters" element="tns:dodaj_sprzedaz"/>
+</message>
+<message name="dodaj_sprzedazResponse">
+<part name="parameters" element="tns:dodaj_sprzedazResponse"/>
+</message>
+<message name="dodaj_zakup">
+<part name="parameters" element="tns:dodaj_zakup"/>
+</message>
+<message name="dodaj_zakupResponse">
+<part name="parameters" element="tns:dodaj_zakupResponse"/>
+</message>
+<message name="wyplaty">
+<part name="parameters" element="tns:wyplaty"/>
+</message>
+<message name="wyplatyResponse">
+<part name="parameters" element="tns:wyplatyResponse"/>
+</message>
 <portType name="Ksiegowosc">
-<operation name="wyplaty">
-<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/wyplatyRequest" message="tns:wyplaty"/>
-<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/wyplatyResponse" message="tns:wyplatyResponse"/>
-</operation>
-<operation name="dodaj_zakup">
-<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_zakupRequest" message="tns:dodaj_zakup"/>
-<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_zakupResponse" message="tns:dodaj_zakupResponse"/>
-</operation>
-<operation name="dodaj_sprzedaz">
-<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_sprzedazRequest" message="tns:dodaj_sprzedaz"/>
-<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_sprzedazResponse" message="tns:dodaj_sprzedazResponse"/>
-</operation>
 <operation name="pobierz_stan_konta">
 <input wsam:Action="http://ksiegowosc.test/Ksiegowosc/pobierz_stan_kontaRequest" message="tns:pobierz_stan_konta"/>
 <output wsam:Action="http://ksiegowosc.test/Ksiegowosc/pobierz_stan_kontaResponse" message="tns:pobierz_stan_kontaResponse"/>
@@ -65,36 +53,21 @@
 <input wsam:Action="http://ksiegowosc.test/Ksiegowosc/pobierz_info_o_sprzedazyRequest" message="tns:pobierz_info_o_sprzedazy"/>
 <output wsam:Action="http://ksiegowosc.test/Ksiegowosc/pobierz_info_o_sprzedazyResponse" message="tns:pobierz_info_o_sprzedazyResponse"/>
 </operation>
+<operation name="dodaj_sprzedaz">
+<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_sprzedazRequest" message="tns:dodaj_sprzedaz"/>
+<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_sprzedazResponse" message="tns:dodaj_sprzedazResponse"/>
+</operation>
+<operation name="dodaj_zakup">
+<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_zakupRequest" message="tns:dodaj_zakup"/>
+<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/dodaj_zakupResponse" message="tns:dodaj_zakupResponse"/>
+</operation>
+<operation name="wyplaty">
+<input wsam:Action="http://ksiegowosc.test/Ksiegowosc/wyplatyRequest" message="tns:wyplaty"/>
+<output wsam:Action="http://ksiegowosc.test/Ksiegowosc/wyplatyResponse" message="tns:wyplatyResponse"/>
+</operation>
 </portType>
 <binding name="KsiegowoscPortBinding" type="tns:Ksiegowosc">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="wyplaty">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="dodaj_zakup">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="dodaj_sprzedaz">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="pobierz_stan_konta">
 <soap:operation soapAction=""/>
 <input>
@@ -114,6 +87,33 @@
 </output>
 </operation>
 <operation name="pobierz_info_o_sprzedazy">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="dodaj_sprzedaz">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="dodaj_zakup">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="wyplaty">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
