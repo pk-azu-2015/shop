@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * @author Kuba Hudzik
- * @author Michal Szalenie 
+ * @author Michal Szaleniec 
  * @author Łukasz Winkler
  */
 @WebService(serviceName = "Pracownicy")
@@ -54,6 +54,17 @@ public class Pracownicy {
     public String Dodaj(String imie, String nazwisko,
                         String adres, String pesel, String stanowisko,
                         double pensja) {
+        
+        polaczenieZBaza();
+        Statement stat = null;
+        try {
+            stat = conn.createStatement();
+            stat.executeQuery(
+                    "INSERT INTO Pracownicy (imie, nazwisko, adres, pesel, stanowisko, pensja) VALUES ("+imie +","+ nazwisko +","+ adres +","+ pesel +","+ stanowisko +","+ pensja+");");
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
         return pesel;
     }
 
