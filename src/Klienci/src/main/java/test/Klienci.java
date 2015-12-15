@@ -151,7 +151,7 @@ public class Klienci {
      */
     @Oneway
     @WebMethod(operationName = "dodaj_do_historii_zakupow")
-    public void  dodajDoHistorii(@WebParam(name ="kodSprzedazy")int kodSprzedazy, 
+    public void  dodajDoHistorii(@WebParam(name ="kodSprzedazy")long kodSprzedazy, 
             @WebParam(name = "PESEL")long PESEL) {
       
         
