@@ -12,7 +12,11 @@
 
 <xs:element name="oblicz_rabatResponse" type="tns:oblicz_rabatResponse"/>
 
-<xs:element name="usun_klienta" type="tns:usun_klienta"/>
+<xs:element name="polaczenieDoBazyDanych" type="tns:polaczenieDoBazyDanych"/>
+
+<xs:element name="polaczenieDoBazyDanychResponse" type="tns:polaczenieDoBazyDanychResponse"/>
+
+<xs:element name="usun" type="tns:usun"/>
 
 <xs:complexType name="oblicz_rabat">
 <xs:sequence/>
@@ -25,38 +29,47 @@
 </xs:complexType>
 
 <xs:complexType name="dodaj_do_historii_zakupow">
+<xs:sequence>
+<xs:element name="kodSprzedazy" type="xs:int"/>
+<xs:element name="PESEL" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="polaczenieDoBazyDanych">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="polaczenieDoBazyDanychResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="dodaj_klienta">
+<xs:sequence>
+<xs:element name="imie" type="xs:string" minOccurs="0"/>
+<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
+<xs:element name="adres" type="xs:string" minOccurs="0"/>
+<xs:element name="NIP" type="xs:int"/>
+<xs:element name="nrTel" type="xs:int"/>
+<xs:element name="PESEL" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dodaj_klientaResponse">
 <xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="edytuj_klienta">
 <xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-<xs:element name="arg1" type="xs:string" minOccurs="0"/>
-<xs:element name="arg2" type="xs:string" minOccurs="0"/>
-<xs:element name="arg3" type="xs:int"/>
+<xs:element name="imie" type="xs:string" minOccurs="0"/>
+<xs:element name="nazwisko" type="xs:string" minOccurs="0"/>
+<xs:element name="adres" type="xs:string" minOccurs="0"/>
+<xs:element name="nrTel" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="dodaj_klienta">
+<xs:complexType name="usun">
 <xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-<xs:element name="arg1" type="xs:string" minOccurs="0"/>
-<xs:element name="arg2" type="xs:string" minOccurs="0"/>
-<xs:element name="arg3" type="xs:int"/>
-<xs:element name="arg4" type="xs:int"/>
-<xs:element name="arg5" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="dodaj_klientaResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="usun_klienta">
-<xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg0" type="xs:long"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>
