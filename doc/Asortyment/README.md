@@ -10,7 +10,7 @@ Sprawozdanie zawiera opis usługi​asortyment​dla sklepu (firma 1). Asortymen
 | ---------------- | ------------------------------------------------ | -------   | :---: |
 | Dodaj produkt | kod produktu(long int), nazwa(string), opis(string), cena(BigDecimal) | oneWay     |       |
 | Usuń  produkt | kod produktu(long int) | OneWay    | |
-| Pobierz listę  | opcjonalnie można podać jedno z pól: kod produktu(long int), nazwa(string), opis(string), cena(BigDecimal) do filtra | lista produktów (tabela)    |       |
+| Pobierz listę  |  | lista produktów (tabela)    |       |
 
 **Powiązania usługi "Asortyment" z innymi usługami**
 
