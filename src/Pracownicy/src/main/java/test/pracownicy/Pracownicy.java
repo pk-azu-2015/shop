@@ -19,7 +19,7 @@ public class Pracownicy {
 
     java.sql.Connection conn = null;
 
-    public void polaczenieZBaza() {
+    private void polaczenieZBaza() {
         // LADOWANIE STEROWNIKA
         System.out.print("Sprawdzanie sterownika:");
         try {
@@ -51,9 +51,9 @@ public class Pracownicy {
     }
 
     @WebMethod(operationName = "Dodaj")
-    public String Dodaj(String imie, String nazwisko,
-                        String adres, String pesel, String stanowisko,
-                        double pensja) {
+    public String Dodaj(@WebParam(name = "imie") String imie, @WebParam(name = "nazwisko") String nazwisko,
+                        @WebParam(name = "adres") String adres, @WebParam(name = "pesel") String pesel, @WebParam(name = "stanowisko") String stanowisko,
+                        @WebParam(name = "pensja") double pensja) {
         
         polaczenieZBaza();
         Statement stat = null;
@@ -74,7 +74,7 @@ public class Pracownicy {
 
     @Oneway
     @WebMethod(operationName = "Usun")
-    public void Usun(String pesel) {
+    public void Usun(@WebParam(name = "pesel") String pesel) {
         polaczenieZBaza();
         Statement stat = null;
         try {
@@ -91,8 +91,8 @@ public class Pracownicy {
 
     @Oneway
     @WebMethod(operationName = "Edytuj")
-    public void Edytuj(String imie, String nazwisko,
-                       String adres, String stanowisko, String pensja) {
+    public void Edytuj(@WebParam(name = "imie") String imie, @WebParam(name = "nazwisko") String nazwisko,
+                       @WebParam(name = "adres") String adres, @WebParam(name = "stanowisko") String stanowisko, @WebParam(name = "pensja") /*String?? a nie double */String pensja) {
         
         polaczenieZBaza();
         Statement stat = null;
@@ -101,7 +101,7 @@ public class Pracownicy {
             stat.executeQuery(
                     
                     "UPDATE Pracownicy SET imie="+imie+"nazwisko="+nazwisko+
-                            "adres="+adres+"stanowisko="+stanowisko+"pensja="+pensja+";");
+                            "adres="+adres+"stanowisko="+stanowisko+"pensja="+pensja+";"); /* dodac WHERE cos = ?? */
         }
         catch (SQLException e) {
             e.printStackTrace();
