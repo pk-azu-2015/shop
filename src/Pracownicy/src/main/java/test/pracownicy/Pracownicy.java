@@ -29,15 +29,14 @@ public class Pracownicy {
         catch (ClassNotFoundException | InstantiationException |
                IllegalAccessException e) {
             System.out.println("Blad przy ladowaniu sterownika bazy!");
-            System.exit(1);
         }
         System.out.print("Sterownik OK");
 
         // LACZENIE Z BAZA
         System.out.print("\nLaczenie z baza danych:");
-        String baza = "jdbc:mysql://db4free.net/azu2015";
-        String user = "azu2015";
-        String pass = "azu2015";
+        String baza = "azu";
+        String user = "azu";
+        String pass = "azuazu";
         java.sql.Connection conn = null;
         
         try {
@@ -45,7 +44,6 @@ public class Pracownicy {
         }
         catch (SQLException e) {
             System.out.println("Blad przy ladowaniu sterownika bazy!!");
-            System.exit(1);
         }
         System.out.print(" polaczenie OK\n");
 
@@ -112,11 +110,11 @@ public class Pracownicy {
 
     }
 
-    @WebMethod(operationName = "ListaPlac")
-    public List<ListaPlac> pobierzListePlac() {
-        List<ListaPlac> lista = new ArrayList<>();
-        return lista;
-    }
+//    @WebMethod(operationName = "ListaPlac")
+//    public List<ListaPlac> pobierzListePlac() {
+//        List<ListaPlac> lista = new ArrayList<>();
+//        return lista;
+//    }
     
     
     
