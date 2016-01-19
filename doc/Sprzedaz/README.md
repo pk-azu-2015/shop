@@ -53,10 +53,10 @@ To Do.
 * Przykład użycia, use case, diagramy sekwencji etc.
 
 
-![alt text](http://i66.tinypic.com/33f4z6d.jpg "Diagram klas usługi Sprzedaż")
+![alt text](http://i67.tinypic.com/9joett.png "Diagram klas usługi Sprzedaż")
 
 
-![alt text](http://i.imgur.com/lQBw2Tl.png "Diagram UML wszystkich usug")
+![alt text](http://i.imgur.com/lQBw2Tl.png "Diagram UML wszystkich uslug")
 
 
 ![alt text](http://i.imgur.com/QB5urr1.png "Przypadki użycia dla usługi Sprzedaż")
@@ -72,4 +72,5 @@ To Do.
 
     * 20.10.2015 - dodanie pliku README.md, dodanie operacji i opis usługi, osób odpowiedzialnych za usług, powiązanie z innymi usługami
     * 01.12.2015 - zmiana parametrów formalnych funkcji sprzedaz, aktualizacja diagramu klas.
+    * 19.01.2015 - finalna wersja dokumentacji, poprawiono diagram klas UML
 
