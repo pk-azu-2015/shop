@@ -37,7 +37,11 @@ otrzymujemy zwrot pieniędzy wyjątek wtedy gdy nie zostanie uznany.
 
 
 ##4. Wymagania, instalacja (deploy), uruchomienie.
-To Do.
+* Sprawny, dzialajacy serwer GlassFish
+
+* Dostep do webservice'ów Klienci i Ksiegowosc
+
+* Projekt spakowany jako paczka war i zainstalowany na serwerze lub bezposrednio zdeploy'wany na serwer
 
 
 ##5. Dokumentacja operacji obsługiwanych przez usługę:
