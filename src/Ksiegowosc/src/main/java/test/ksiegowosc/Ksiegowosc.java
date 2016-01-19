@@ -31,20 +31,18 @@ public class Ksiegowosc {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
             System.out.println("Blad przy ladowaniu sterownika bazy!");
-            System.exit(1);
         }
         System.out.print(" sterownik OK");
 
         System.out.print("\nLaczenie z baza danych:");
-        String baza = "jdbc:mysql://db4free.net/azu2015";
-        String user = "azu2015";
-        String pass = "azu2015";
+        String baza = "azu";
+        String user = "azu";
+        String pass = "azuazu";
 
         try {
             conn = DriverManager.getConnection(baza, user, pass);
         } catch (SQLException e) {
             System.out.println("Blad przy ladowaniu sterownika bazy!");
-            System.exit(1);
         }
         System.out.print(" polaczenie OK\n");
 
