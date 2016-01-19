@@ -76,5 +76,5 @@ otrzymujemy zwrot pieniędzy wyjątek wtedy gdy nie zostanie uznany.
 
     * 20.10.2015 - dodanie pliku README.md, dodanie operacji i opis usługi, osób odpowiedzialnych za usług, powiązanie z innymi usługami
     * 01.12.2015 - zmiana parametrów formalnych funkcji sprzedaz, aktualizacja diagramu klas.
-    * 19.01.2015 - finalna wersja dokumentacji, poprawiono diagram klas UML
+    * 19.01.2015 - finalna wersja dokumentacji, poprawiono diagram klas UML, dodano wymagania (punkt 4)
 
