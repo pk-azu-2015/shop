@@ -60,8 +60,8 @@ public class Pracownicy {
             stat = conn.createStatement();
             stat.executeQuery(
                     "INSERT INTO Pracownicy (imie, nazwisko, adres, pesel, stanowisko, pensja) VALUES "
-                                        + "("+imie +","+ nazwisko +","+ adres +","+ pesel 
-                                        +","+ stanowisko +","+ pensja+");");
+                                        + "('"+imie +"', '"+ nazwisko +"', '"+ adres +"', '"+ pesel 
+                                        +"', '"+ stanowisko +"',"+ pensja+");");
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -79,7 +79,7 @@ public class Pracownicy {
         try {
             stat = conn.createStatement();
             stat.executeQuery(
-                    "DELETE FROM Pracownicy WHERE PESEL=" + pesel + ";");
+                    "DELETE FROM Pracownicy WHERE PESEL='" + pesel + "';");
         }
         catch (SQLException e) {
             e.printStackTrace();
@@ -99,8 +99,8 @@ public class Pracownicy {
             stat = conn.createStatement();
             stat.executeQuery(
                     
-                    "UPDATE Pracownicy SET imie="+imie+"nazwisko="+nazwisko+
-                            "adres="+adres+"stanowisko="+stanowisko+"pensja="+pensja+";"); /* dodac WHERE cos = ?? */
+                    "UPDATE Pracownicy SET imie='"+imie+"', nazwisko='"+nazwisko+
+                            "', adres='"+adres+"', stanowisko='"+stanowisko+"', pensja="+pensja+";"); /* dodac WHERE cos = ?? */
         }
         catch (SQLException e) {
             e.printStackTrace();
